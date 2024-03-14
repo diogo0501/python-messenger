@@ -47,23 +47,27 @@ class LoginGui():
         self.server_port_entry.grid(row=2, column=3)
         # setting default port check box
         self.default_port = StringVar()
-        self.default_port_check_button = Checkbutton(main_win, font=('Tahoma', 15), text='Default port (54321)',offvalue='off', onvalue='on', variable=self.default_port, command=self.change_port_entry)
+        self.default_port_check_button = Checkbutton(main_win, font=('Tahoma', 15), text='Default port (54321)',
+                                                     offvalue='off', onvalue='on', variable=self.default_port, 
+                                                     command=self.change_port_entry)
         self.change_port_entry()
         self.default_port_check_button.config(fg='Black')
         self.default_port_check_button.grid(row=3, column=1)
         self.default_port.set('off')
 
         # setting the authentication status check box if it is enabled user must use password
-        self.auth_status = StringVar()
-        self.auth_status_check_button = Checkbutton(main_win, font=('Tahoma', 15), text='Authentication enabled', offvalue='off', onvalue='on', variable=self.auth_status, command=self.change_authentication_status_entry)
-        self.auth_status_check_button.config(fg='Black')
-        self.auth_status_check_button.grid(row=3, column=2)
-        self.lbl_pass_entry.insert(0, 'public') # set default password to public when authentication is disabled
-        self.auth_status.set('off') # set check box to disabled mode by default
-        self.lbl_pass_entry.config(state='disabled') # disable password box bcs authentication is not enabled by default
+        # self.auth_status = StringVar()
+        # self.auth_status_check_button = Checkbutton(main_win, font=('Tahoma', 15), 
+        #                                             text='Authentication enabled', offvalue='off', onvalue='on', variable=self.auth_status, command=self.change_authentication_status_entry)
+        # self.auth_status_check_button.config(fg='Black')
+        # self.auth_status_check_button.grid(row=3, column=2)
+        # self.lbl_pass_entry.insert(0, 'public') # set default password to public when authentication is disabled
+        # self.auth_status.set('off') # set check box to disabled mode by default
+        # self.lbl_pass_entry.config(state='disabled') # disable password box bcs authentication is not enabled by default
 
         # setting set button for connection info
-        self.set_button = Button(main_win, text='   Set   ', font=('Tahoma', 17), command=self.create_chat_gui)
+        self.set_button = Button(main_win, text='   Set   ', font=('Tahoma', 17), 
+                                 command=self.create_chat_gui)
         self.set_button.config(activeforeground='Blue', activebackground='White')
         self.set_button.grid(row=4, column=3)
 
@@ -80,25 +84,26 @@ class LoginGui():
             self.server_port_entry.delete(0, END)
             self.server_port_entry.config(state='normal')
 
-    def change_authentication_status_entry(self):
-        '''function for changing authentication mode'''
-        # if it's on ,enable the password entry
-        if self.auth_status.get() == 'on' :
-            self.lbl_pass_entry.config(state='normal')
-            self.lbl_pass_entry.delete(0,END)
+    # def change_authentication_status_entry(self):
+    #     '''function for changing authentication mode'''
+    #     # if it's on ,enable the password entry
+    #     if self.auth_status.get() == 'on' :
+    #         self.lbl_pass_entry.config(state='normal')
+    #         self.lbl_pass_entry.delete(0,END)
 
-        # if it's off ,disable the password entry
-        if self.auth_status.get() == 'off':
-            self.lbl_pass_entry.delete(0, END)
-            self.lbl_pass_entry.insert(0,'public')
-            self.lbl_pass_entry.config(state='disabled')
+    #     # if it's off ,disable the password entry
+    #     if self.auth_status.get() == 'off':
+    #         self.lbl_pass_entry.delete(0, END)
+    #         self.lbl_pass_entry.insert(0,'public')
+    #         self.lbl_pass_entry.config(state='disabled')
 
     def create_chat_gui(self):
         '''function for connect button'''
 
-        try_to_connect_or_not = messagebox.askokcancel('Connection', 'If the chat window exists ,it will be closed')
+        try_to_connect_or_not = messagebox.askokcancel('Connection', 'If the chat window exists , \
+                                                       it will be closed')
         if try_to_connect_or_not == True:
-             if (self.chat_win_exist is None) or (self.chat_win_exist is not None): # This condition is true anyway
+             #if (self.chat_win_exist is None) or (self.chat_win_exist is not None): # This condition is true anyway
                 try:
                     self.chat_win_exist.chat_win.destroy() # try to close chat window
                 except:
@@ -120,7 +125,8 @@ class ChatGui():
             messagebox.showerror('Error', 'Enter your name e.g. (Xenon) !')
             return
         elif len(self.password) < 1:
-            messagebox.showerror('Error', 'Enter password ! if you don\'t have password *uncheck* authentication enabled check box')
+            messagebox.showerror('Error', 'Enter password ! if you don\'t have password \
+                                 *uncheck* authentication enabled check box')
             return
         elif len(self.server_ip) < 1:
             messagebox.showerror('Error', 'Enter server ip address !')
@@ -137,7 +143,8 @@ class ChatGui():
                 return
 
         # check input if they are entered and create the chat window for establishing the connection
-        if (len(str(self.port_num)) >= 1) and (len(self.username) >= 1) and (len(self.password) >= 1) and (len(self.username) >= 1) :
+        if (len(str(self.port_num)) >= 1) and (len(self.username) >= 1) \
+                and (len(self.password) >= 1) and (len(self.username) >= 1) :
             self.create_chat_window()
 
     def create_chat_window(self):
@@ -150,7 +157,8 @@ class ChatGui():
             self.chat_win.geometry('610x820')
             self.chat_win.resizable(1, 1)
             # user info on top of the window
-            chat_win_user_label = Label(self.chat_win, text=('Your name : ' + self.username), font=('Tahoma', '15'))
+            chat_win_user_label = Label(self.chat_win, text=('Your name : ' + self.username), 
+                                        font=('Tahoma', '15'))
             chat_win_user_label.pack()
             # connection status on top of the window
             self.chat_server_connection_status = Label(self.chat_win)
@@ -160,8 +168,14 @@ class ChatGui():
             if server_status is None:
                 self.chat_server_connection_status.config(text=('Server status : Not connected'), font=('Tahoma', '15'), fg='Red')
             # set connect button settings
-            self.connect_button = Button(self.chat_win, text='Connect', font=('Tahoma', 15), command=self.connect_to_server)
-            self.connect_button.pack()
+            self.sign_button = Button(self.chat_win, text='Sign in', font=('Tahoma', 15),
+                                        command=lambda: self.connect_to_server('sign'))
+                                         
+            self.sign_button.pack()
+            # set connect button settings
+            self.login_button = Button(self.chat_win, text='Login', font=('Tahoma', 15), 
+                                         command=lambda: self.connect_to_server('login'))
+            self.login_button.pack()
             # setting the text box windows
             self.chat_room_text_box = Text(self.chat_win)
             self.chat_room_text_box.pack()
@@ -177,17 +191,19 @@ class ChatGui():
             # setting the send message button
             self.send_message_button = Button(self.chat_win)
             self.send_message_button.pack()
-            self.send_message_button.config(text='   Send   ', font=('Tahoma', 18), state='disabled', command=self.send_msg)
+            self.send_message_button.config(text='   Send   ', font=('Tahoma', 18), state='disabled', 
+                                            command=self.send_msg)
 
             self.chat_win.mainloop()
 
-    def connect_to_server(self):
+    def connect_to_server(self,conntype):
         '''function for initial connection to the server'''
         try:
             self.client_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
             self.client_socket.connect((self.server_ip,self.port_num))
             # credential format => user:username,pass:password;
-            credential = 'user:' + self.username + ',pass:' + self.password + ';'
+            print("Sent already???")
+            credential = 'conntype:' + conntype + ',user:' + self.username + ',pass:' + self.password + ';'
             self.client_socket.sendall(credential.encode())
 
         except :
@@ -195,12 +211,13 @@ class ChatGui():
             messagebox.showerror('Error', 'Connection failed !')
             return
         else:
-            # get ACK if credential is correct or not
+            # get ACK if credential is correct or 
 
             credential_ack = self.client_socket.recv(4096)
+            print(credential_ack)
             if credential_ack.decode() == 'invalid credentials':
                 self.client_socket.close()
-                messagebox.showerror('Error','Invalid credential')
+                messagebox.showerror('Error','Invalid credentials')
                 return
             elif credential_ack.decode() == 'valid credentials':
                 pass
@@ -209,10 +226,11 @@ class ChatGui():
                 messagebox.showerror('Error','An unexpected error occurred !')
                 return
             # setting GUI elements
-            self.connect_button.config(state = 'disabled') # disable connect button
+            # self.connect_button.config(state = 'disabled') # disable connect button
             self.send_message_text_box.config(state='normal') # enable send message box
             self.send_message_button.config(state='normal') # enable send message button
-            self.chat_server_connection_status.config(text=('Server status : Connected'), font=('Tahoma', '15'),fg='Green')
+            self.chat_server_connection_status.config(text=('Server status : Connected'), 
+                                                      font=('Tahoma', '15'),fg='Green')
 
             Thread(target=self.receive_msg).start() # start threading for getting messages
             Thread(target=self.send_client_signal).start() # start threading for sending signal messages
@@ -223,16 +241,18 @@ class ChatGui():
             try:
                 self.clients_message_from_server = self.client_socket.recv(4096)
                 if not self.clients_message_from_server : break
-                if (self.clients_message_from_server) and (self.clients_message_from_server.decode() != 'server signal') :
+                if (self.clients_message_from_server) and \
+                        (self.clients_message_from_server.decode() != 'server signal') :
                     # server signal is a message from server to check connection between itself and client
                     Thread(target=self.update_text_display,args=(self.clients_message_from_server,)).start()
 
             except:
                 self.client_socket.close()
-                self.connect_button.config(state='normal')  # enable connect button
+                # self.connect_button.config(state='normal')  # enable connect button
                 self.send_message_text_box.config(state='disabled')  # disable send message box
                 self.send_message_button.config(state='disabled')  # disable send message button
-                self.chat_server_connection_status.config(text=('Server status : Not connected'), font=('Tahoma', '15'),fg='Red')
+                self.chat_server_connection_status.config(text=('Server status : Not connected'), 
+                                                          font=('Tahoma', '15'),fg='Red')
                 messagebox.showerror('Error','Connection closed !')
                 break
 
@@ -254,10 +274,11 @@ class ChatGui():
                 self.client_socket.sendall(final_message.encode())
             except:
                 self.client_socket.close()
-                self.connect_button.config(state='normal')
+                # self.connect_button.config(state='normal')
                 self.send_message_text_box.config(state='disabled')  # disable send message box
                 self.send_message_button.config(state='disabled') # disable send message button
-                self.chat_server_connection_status.config(text=('Server status : Not connected'), font=('Tahoma', '15'), fg='Red')
+                self.chat_server_connection_status.config(text=('Server status : Not connected'), 
+                                                          font=('Tahoma', '15'), fg='Red')
                 messagebox.showerror('Connection error','Connection is closed !')
 
             else:
@@ -285,10 +306,11 @@ class ChatGui():
                 self.client_socket.sendall(b'client signal')
             except:
                 self.client_socket.close()
-                self.connect_button.config(state='normal')
+                # self.connect_button.config(state='normal')
                 self.send_message_text_box.config(state='disabled')  # disable send message box
                 self.send_message_button.config(state='disabled')  # disable send message button
-                self.chat_server_connection_status.config(text=('Server status : Not connected'), font=('Tahoma', '15'), fg='Red')
+                self.chat_server_connection_status.config(text=('Server status : Not connected'), 
+                                                          font=('Tahoma', '15'), fg='Red')
                 messagebox.showerror('Connection error', 'Connection is closed !')
 
 root = tk.Tk()

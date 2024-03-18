@@ -64,7 +64,7 @@ class LoginGui():
         # self.lbl_pass_entry.insert(0, 'public') # set default password to public when authentication is disabled
         # self.auth_status.set('off') # set check box to disabled mode by default
         # self.lbl_pass_entry.config(state='disabled') # disable password box bcs authentication is not enabled by default
-
+        
         # setting set button for connection info
         self.set_button = Button(main_win, text='   Set   ', font=('Tahoma', 17), 
                                  command=self.create_chat_gui)
@@ -119,6 +119,7 @@ class ChatGui():
         self.port_num = info.server_port_entry.get()
         self.username = info.lbl_user_entry.get()
         self.password = info.lbl_pass_entry.get()
+        self.authStatus = False
 
         # show message boxes if inputs are not entered
         if len(self.username) < 1:
@@ -225,6 +226,22 @@ class ChatGui():
                 self.client_socket.close()
                 messagebox.showerror('Error','An unexpected error occurred !')
                 return
+            
+            self.authStatus = True
+            self.login_button.config(state=tk.DISABLED)
+            self.sign_button.config(state=tk.DISABLED)
+            msgs_encoded = self.client_socket.recv(4096)
+            print(msgs_encoded)
+            msgs_decode = [tuple(part.split(b',')) for part in msgs_encoded.split(b'\n')]
+
+            try :
+                for _, message in msgs_decode:
+                    print(message)
+                    self.update_text_display(message)
+            
+            except:
+                pass
+
             # setting GUI elements
             # self.connect_button.config(state = 'disabled') # disable connect button
             self.send_message_text_box.config(state='normal') # enable send message box

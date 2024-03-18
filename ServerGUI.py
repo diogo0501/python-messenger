@@ -78,7 +78,7 @@ class ServerManager():
         self.check_log_dir() # check if log folder and log files exist if they don't exist they will be created
         
         self.setup_db()
-        self.check_all_msgs()
+        self.get_messages()
 
     # def change_authentication_status_entry(self):
     #     '''function for changing authentication mode'''
@@ -92,22 +92,30 @@ class ServerManager():
 
     def signup(self,username, password):
 
-        op_res = self.dbcursor.execute('''INSERT INTO users (username,password) VALUES (?,?)'''
-                                    ,(username,password))
+        try:
+            #SQL INJECTION
+            op_res = self.dbcursor.executescript('''INSERT INTO users (username,password) VALUES ('{0}','{1}')'''
+                                           .format(username,password))
 
-        self.dbconn.commit()
-
+            self.dbconn.commit()
+        except Exception as e:
+            print(e)
+            return "invalid credentials"
+        print(self.dbcursor.execute('SELECT * FROM users').fetchall())
         return "invalid credentials" if op_res == None else "valid credentials"
     
     def login(self,username, password):
 
-        self.dbcursor.execute('SELECT * FROM users WHERE username = ?''' , (username,))
+        
+        self.dbcursor.execute('SELECT * FROM users WHERE username = ?' , (username,))
         
         try :
             user = self.dbcursor.fetchall()[0]
             if password != user[2]:
                 return "invalid credentials"
-        except:
+        except Exception as e:
+            print(e)
+            
             return "invalid credentials"
 
         return "valid credentials"
@@ -121,12 +129,12 @@ class ServerManager():
         self.dbcursor = self.dbconn.cursor()
 
         # Create the users table
-        self.dbcursor.execute('''CREATE TABLE users
+        self.dbcursor.execute('''CREATE TABLE IF NOT EXISTS users
                 (id INTEGER PRIMARY KEY AUTOINCREMENT,
                  username VARCHAR(30) NOT NULL UNIQUE,
                  password VARCHAR(30) NOT NULL)''')
         
-        self.dbcursor.execute('''CREATE TABLE messages 
+        self.dbcursor.execute('''CREATE TABLE IF NOT EXISTS messages 
                        (username VARCHAR(30) NOT NULL,
                         message  VARCHAR(30) NOT NULL)''')
         
@@ -144,11 +152,11 @@ class ServerManager():
         return 
     
     # TESTING PURPOSES - CHANGED
-    def check_all_msgs(self):
+    def get_messages(self):
 
         self.dbcursor.execute('''SELECT * FROM messages''')
 
-        print(self.dbcursor.fetchall())
+        return self.dbcursor.fetchall()
     
     
     def reset_db(self):
@@ -169,8 +177,10 @@ class ServerManager():
             if user_pass_dict[username] == password:
                 return 'valid credentials'
             else:
+                print("P7")
                 return 'invalid credentials'
         else:
+            print("P8")
             return 'invalid credentials'
 
         # else:
@@ -233,20 +243,25 @@ class ServerManager():
                         client_name = cv[1]
                         client_pass = cv[2]
                     else:
+                        print("P10")
                         self.client_connection.sendall(b'invalid credentials')
                         self.client_connection.close()
-                        self.save_connections_logs('unknown user', client_ip[0], 'Invalid credential format','connection failed')
+                        self.save_connections_logs('unknown user', client_ip[0], 'Invalid credential format',
+                                                   'connection failed')
                         continue
             else:
+                print("P11")
                 self.client_connection.sendall(b'invalid credentials')
                 self.client_connection.close()
                 self.save_connections_logs('unknown user', client_ip[0], 'invalid credential format','connection failed')
                 continue
 
             # check_client = self.authenticate_client(client_name,client_pass)
-
+            print(conntype)
             check_client = (self.signup(client_name, client_pass) if conntype == 'sign' 
                             else self.login(client_name,client_pass))
+            
+
 
             if check_client == 'valid credentials':
                 self.clients_name.append(client_name)
@@ -262,6 +277,8 @@ class ServerManager():
                 self.clients_list.append(self.client_connection)
                 self.client_connection.sendall(b"Welcome " + client_name.encode()) # send welcome message to client
                 print("Number of clients : " + str(self.clients_num))
+                msgs_encoded = '\n'.join([f'{x},{y}' for x,y in self.get_messages()]).encode()
+                self.client_connection.sendall(msgs_encoded)
 
                 Thread(target=self.send_recv_clients_msg, args=(self.client_connection, client_name, client_ip[0],)).start()
                 Thread(target=self.send_server_signal, args=(self.client_connection,client_name,client_ip,)).start()
@@ -301,8 +318,8 @@ class ServerManager():
                 if data == b'quit': break
                 client_msg = data.decode().strip()
                 client_msg = client_msg.encode()
-                self.persist_msg(client_name,client_msg)
                 if client_msg.decode() != 'client signal': # client signal message is for checking connection
+                    self.persist_msg(client_name,client_msg.decode())
                     for c in self.clients_list:
                         if c != client:
                             c.sendall(client_msg)

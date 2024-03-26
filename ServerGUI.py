@@ -177,7 +177,6 @@ class ServerManager():
             if user_pass_dict[username] == password:
                 return 'valid credentials'
             else:
-                print("P7")
                 return 'invalid credentials'
         else:
             print("P8")

@@ -273,6 +273,8 @@ class ChatGui():
                 messagebox.showerror('Error','Connection closed !')
                 break
 
+    
+
     def send_msg(self):
         '''
         function for sending messages
@@ -285,7 +287,10 @@ class ChatGui():
             local_message = 'You->' + new_message.strip()
             final_message = self.username + '->' + new_message.strip()
             self.chat_room_text_box.config(state='normal',fg='Black') # enable chat box for inserting message
-            self.chat_room_text_box.insert(END,local_message + '\n')
+            # self.chat_room_text_box.insert(END,local_message + '\n')
+
+            # [VULNERABILITY] Command Injection
+            eval("self.chat_room_text_box.insert(END,'" + local_message + "\\n'" + ")")
             self.chat_room_text_box.config(state='disabled') # disable chat box
             try:
                 self.client_socket.sendall(final_message.encode())
@@ -306,6 +311,9 @@ class ChatGui():
             messagebox.showerror('Error', 'Your can\'t send more that 100 character !')
         else:
             messagebox.showerror('Error', 'Message can\'t be sent !')
+
+    def test_code_injection():
+        print("[DANGER] Code injected")
 
     def update_text_display(self, msg):
         '''function for displaying messages in the messages text box'''

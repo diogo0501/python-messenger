@@ -55,16 +55,6 @@ class LoginGui():
         self.default_port_check_button.grid(row=3, column=1)
         self.default_port.set('off')
 
-        # setting the authentication status check box if it is enabled user must use password
-        # self.auth_status = StringVar()
-        # self.auth_status_check_button = Checkbutton(main_win, font=('Tahoma', 15), 
-        #                                             text='Authentication enabled', offvalue='off', onvalue='on', variable=self.auth_status, command=self.change_authentication_status_entry)
-        # self.auth_status_check_button.config(fg='Black')
-        # self.auth_status_check_button.grid(row=3, column=2)
-        # self.lbl_pass_entry.insert(0, 'public') # set default password to public when authentication is disabled
-        # self.auth_status.set('off') # set check box to disabled mode by default
-        # self.lbl_pass_entry.config(state='disabled') # disable password box bcs authentication is not enabled by default
-        
         # setting set button for connection info
         self.set_button = Button(main_win, text='   Set   ', font=('Tahoma', 17), 
                                  command=self.create_chat_gui)
@@ -84,32 +74,12 @@ class LoginGui():
             self.server_port_entry.delete(0, END)
             self.server_port_entry.config(state='normal')
 
-    # def change_authentication_status_entry(self):
-    #     '''function for changing authentication mode'''
-    #     # if it's on ,enable the password entry
-    #     if self.auth_status.get() == 'on' :
-    #         self.lbl_pass_entry.config(state='normal')
-    #         self.lbl_pass_entry.delete(0,END)
-
-    #     # if it's off ,disable the password entry
-    #     if self.auth_status.get() == 'off':
-    #         self.lbl_pass_entry.delete(0, END)
-    #         self.lbl_pass_entry.insert(0,'public')
-    #         self.lbl_pass_entry.config(state='disabled')
-
     def create_chat_gui(self):
-        '''function for connect button'''
-
-        try_to_connect_or_not = messagebox.askokcancel('Connection', 'If the chat window exists , \
-                                                       it will be closed')
-        if try_to_connect_or_not == True:
-             #if (self.chat_win_exist is None) or (self.chat_win_exist is not None): # This condition is true anyway
-                try:
-                    self.chat_win_exist.chat_win.destroy() # try to close chat window
-                except:
-                    self.chat_win_exist = ChatGui(self) # create chat window
-                else:
-                    self.chat_win_exist = ChatGui(self) # create chat window
+        if messagebox.askokcancel('Connection', 'If the chat window exists, it will be closed.'):
+            if self.chat_win_exist and hasattr(self.chat_win_exist, 'chat_win'):
+                if self.chat_win_exist.chat_win.winfo_exists():
+                    self.chat_win_exist.chat_win.destroy()  # Close the chat window
+            self.chat_win_exist = ChatGui(self)  # Create chat window
 
 
 #class for chat room window(second window)
@@ -203,7 +173,6 @@ class ChatGui():
             self.client_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
             self.client_socket.connect((self.server_ip,self.port_num))
             # credential format => user:username,pass:password;
-            print("Sent already???")
             credential = 'conntype:' + conntype + ',user:' + self.username + ',pass:' + self.password + ';'
             self.client_socket.sendall(credential.encode())
 
@@ -231,7 +200,6 @@ class ChatGui():
             self.login_button.config(state=tk.DISABLED)
             self.sign_button.config(state=tk.DISABLED)
             msgs_encoded = self.client_socket.recv(4096)
-            print(msgs_encoded)
             msgs_decode = [tuple(part.split(b',')) for part in msgs_encoded.split(b'\n')]
 
             try :
@@ -243,7 +211,6 @@ class ChatGui():
                 pass
 
             # setting GUI elements
-            # self.connect_button.config(state = 'disabled') # disable connect button
             self.send_message_text_box.config(state='normal') # enable send message box
             self.send_message_button.config(state='normal') # enable send message button
             self.chat_server_connection_status.config(text=('Server status : Connected'), 
@@ -282,12 +249,10 @@ class ChatGui():
         '''
 
         new_message = self.send_message_text_box.get('1.0',END)
-        if (len(new_message.strip()) >= 1) and (len(new_message.strip()) <= 100) :
-
+        if 1 <= len(new_message.strip()) <= 100:
             local_message = 'You->' + new_message.strip()
             final_message = self.username + '->' + new_message.strip()
             self.chat_room_text_box.config(state='normal',fg='Black') # enable chat box for inserting message
-            # self.chat_room_text_box.insert(END,local_message + '\n')
 
             # [VULNERABILITY] Command Injection
             eval("self.chat_room_text_box.insert(END,'" + local_message + "\\n'" + ")")
@@ -296,7 +261,6 @@ class ChatGui():
                 self.client_socket.sendall(final_message.encode())
             except:
                 self.client_socket.close()
-                # self.connect_button.config(state='normal')
                 self.send_message_text_box.config(state='disabled')  # disable send message box
                 self.send_message_button.config(state='disabled') # disable send message button
                 self.chat_server_connection_status.config(text=('Server status : Not connected'), 
@@ -316,12 +280,13 @@ class ChatGui():
         print("[DANGER] Code injected")
 
     def update_text_display(self, msg):
-        '''function for displaying messages in the messages text box'''
-        msg_new = msg.decode()
-        msg_new = msg_new.strip() + '\n'
-        self.chat_room_text_box.config(state='normal')
-        self.chat_room_text_box.insert(END, msg_new)
-        self.chat_room_text_box.config(state='disabled')
+        def _update_text():
+            msg_new = msg.decode().strip() + '\n'
+            self.chat_room_text_box.config(state='normal')
+            self.chat_room_text_box.insert(END, msg_new)
+            self.chat_room_text_box.config(state='disabled')
+        self.chat_win.after(0, _update_text)
+
 
     def send_client_signal(self):
         '''function for sending signal to server for checking connection between client and server'''
@@ -331,7 +296,6 @@ class ChatGui():
                 self.client_socket.sendall(b'client signal')
             except:
                 self.client_socket.close()
-                # self.connect_button.config(state='normal')
                 self.send_message_text_box.config(state='disabled')  # disable send message box
                 self.send_message_button.config(state='disabled')  # disable send message button
                 self.chat_server_connection_status.config(text=('Server status : Not connected'), 

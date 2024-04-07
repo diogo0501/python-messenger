@@ -24,8 +24,7 @@ connection_status = None # for detecting the server status , 1 is listening , 0 
 class ServerManager():
     def __init__(self,main_win):
         self.app_version = 'V2.1'
-        # self.authentication_enabled = False # authentication is disabled by default
-
+      
         # regex for getting users and their password from creds.txt file and when getting users and passwords from client
         self.cred_regex = '''conntype:(.*),user:(.*),pass:(.*);'''
 
@@ -52,13 +51,6 @@ class ServerManager():
         self.server_port_num_entry = Entry(self.main_win,font=('Tahoma',15))
         self.server_port_num_entry.pack()
 
-        # # setting authentication mode check box
-        # self.auth_status = StringVar()
-        # self.auth_status_check_button = Checkbutton(main_win, font=('Tahoma', 15), text='Authentication enabled', offvalue='off', onvalue='on', variable=self.auth_status, command=self.change_authentication_status_entry)
-        # self.auth_status_check_button.config(fg='Black')
-        # self.auth_status.set('off')
-        # self.auth_status_check_button.pack()
-
         # setting start listening button
         self.server_start_button = Button(self.main_win,text = '           Start           ', font = ('Tahoma',15),fg = 'Green',command = self.check_input_values)
         self.server_start_button.pack()
@@ -80,18 +72,8 @@ class ServerManager():
         self.setup_db()
         self.get_messages()
 
-    # def change_authentication_status_entry(self):
-    #     '''function for changing authentication mode'''
-
-    #     if self.auth_status.get() == 'on' :
-    #         self.authentication_enabled = True # enable password authentication
-
-    #     # if it's off ,disable the password entry
-    #     if self.auth_status.get() == 'off':
-    #         self.authentication_enabled = False # disable password authentication
 
     def signup(self,username, password):
-
         try:
             #SQL INJECTION
             op_res = self.dbcursor.executescript('''INSERT INTO users (username,password) VALUES ('{0}','{1}')'''
@@ -105,8 +87,6 @@ class ServerManager():
         return "invalid credentials" if op_res == None else "valid credentials"
     
     def login(self,username, password):
-
-        
         self.dbcursor.execute('SELECT * FROM users WHERE username = ?' , (username,))
         
         try :
@@ -143,7 +123,6 @@ class ServerManager():
         return
     
     def persist_msg(self, username, message):
-
         op_res = self.dbcursor.execute('''INSERT INTO messages (username,message) VALUES (?,?)'''
                                     ,(username,message))
 
@@ -153,44 +132,18 @@ class ServerManager():
     
     # TESTING PURPOSES - CHANGED
     def get_messages(self):
-
         self.dbcursor.execute('''SELECT * FROM messages''')
-
         return self.dbcursor.fetchall()
     
     
     def reset_db(self):
         return
 
-    def authenticate_client(self,username,password):
-        '''function for authenticating client'''
-        # if authentication is enabled it will check the credentials with cred.txt file
-        # if self.authentication_enabled :
-        with open('creds.txt','r') as cred_file:
-            user_pass_dict = {}
-            content = cred_file.read()
-            creds_list = re.findall(self.cred_regex, content)
-            # cv is credential values list like [(username,password)]
-            for cv in creds_list:
-                user_pass_dict[cv[0]] = cv[1]
-        if username in user_pass_dict :
-            if user_pass_dict[username] == password:
-                return 'valid credentials'
-            else:
-                return 'invalid credentials'
-        else:
-            print("P8")
-            return 'invalid credentials'
-
-        # else:
-        #     return 'valid credentials' # if authentication is disabled it returns true
-
     def check_input_values(self):
         '''
         function for check entered values
         this function will be called when start button is clicked
         '''
-
         try:
             self.server_ip = self.server_ip_entry.get()
             self.server_port = int(self.server_port_num_entry.get())
@@ -215,93 +168,89 @@ class ServerManager():
             messagebox.showerror('Error', 'Listening failed !')
         else:
             connection_status = 1 # 1 is listening
-            # self.auth_status_check_button.config(state='disabled') # disable authentication check box after start listening
             self.server_start_button.config(state='disabled')
             self.server_stop_button.config(state='normal')
             messagebox.showinfo('Connection', ('listening on ' + str(self.server_ip) + ':' 
                                                + str(self.server_port)))
 
     def connection_accept(self):
-        '''function fot accepting client connection requests'''
+        '''Function for accepting client connection requests.'''
 
         while True:
-            # if connection status is 0 then break the loop
-            if connection_status == 0: # 0 is not listening
+            if connection_status == 0:  # Exit loop if the server is no longer listening.
                 break
-            # try:
-            self.client_connection, client_ip = self.server_socket.accept()
-            client_creds = self.client_connection.recv(4096).decode() # first credential data sent by client
-            client_creds_values = re.findall(self.cred_regex, client_creds) # [(username,password)]
-            conntype    = None
-            client_name = ''
-            client_pass = ''
-            if len(client_creds_values) == 1 :
-                for cv in client_creds_values :
-                    if len(cv) == 3 :
-                        conntype    = cv[0]
-                        client_name = cv[1]
-                        client_pass = cv[2]
-                    else:
-                        print("P10")
-                        self.client_connection.sendall(b'invalid credentials')
-                        self.client_connection.close()
-                        self.save_connections_logs('unknown user', client_ip[0], 'Invalid credential format',
-                                                   'connection failed')
-                        continue
-            else:
-                print("P11")
-                self.client_connection.sendall(b'invalid credentials')
-                self.client_connection.close()
-                self.save_connections_logs('unknown user', client_ip[0], 'invalid credential format','connection failed')
-                continue
 
-            # check_client = self.authenticate_client(client_name,client_pass)
-            print(conntype)
-            check_client = (self.signup(client_name, client_pass) if conntype == 'sign' 
-                            else self.login(client_name,client_pass))
+            try:
+                self.client_connection, client_ip = self.server_socket.accept()
+            except Exception as e:
+                print(f"Error accepting connection: {e}")
+                continue  # Continue accepting next connections
+
+            try:
+                client_creds = self.client_connection.recv(4096).decode()
+                match = re.match(self.cred_regex, client_creds)
+                if not match:
+                    self.send_error_response(client_ip, "Invalid credential format")
+                    continue
+
+                conntype, client_name, client_pass = match.groups()
+                check_client = self.signup(client_name, client_pass) if conntype == 'sign' else self.login(client_name, client_pass)
+
+                if check_client == 'valid credentials':
+                    self.handle_valid_credentials(client_name, client_ip)
+                else:
+                    self.send_error_response(client_ip, "Invalid credentials")
+
+            except Exception as e:
+                print(f"Error handling connection: {e}")
+                self.send_error_response(client_ip, "Error in connection handling")
+
+    def send_error_response(self, client_ip, error_message):
+        '''Sends an error response to the client and logs the error.'''
+        print(f"{error_message} - IP: {client_ip[0]}")
+        self.client_connection.sendall(error_message.encode())
+        self.client_connection.close()
+        self.save_connections_logs('unknown user', client_ip[0], error_message, 'connection failed')
+
+    def handle_valid_credentials(self, client_name, client_ip):
+        '''Handles actions for valid credentials.'''
+
+        # Add client name to the list and update the clients' display
+        self.clients_name.append(client_name)
+        self.update_clinets_list_display()
+
+        # Log the successful connection
+        self.save_connections_logs(client_name, client_ip[0], 'valid credentials', 'connection successful')
+
+        # Send a positive acknowledgment to the client
+        self.client_connection.sendall(b'valid credentials')
+
+        # Inform other clients that a new user has joined
+        join_msg = client_name.encode() + b" joined"
+        for c in self.clients_list:
+            if c != self.client_connection:
+                c.sendall(join_msg)
+
+        # Log the new client connection
+        new_client_msg = f"New client -> Name: {client_name}, IP: {client_ip[0]}"
+        print(new_client_msg)
+
+        # Increment the client counter and add the new connection to the clients list
+        self.clients_num += 1
+        self.clients_list.append(self.client_connection)
+
+        # Send a welcome message to the new client
+        welcome_msg = b"Welcome " + client_name.encode()
+        self.client_connection.sendall(welcome_msg)
+
+        # Send existing messages to the new client
+        msgs_encoded = '\n'.join([f'{x},{y}' for x, y in self.get_messages()]).encode()
+        self.client_connection.sendall(msgs_encoded)
+
+        # Start threads for message handling and server signaling
+        Thread(target=self.send_recv_clients_msg, args=(self.client_connection, client_name, client_ip[0])).start()
+        Thread(target=self.send_server_signal, args=(self.client_connection, client_name, client_ip)).start()
             
-
-
-            if check_client == 'valid credentials':
-                self.clients_name.append(client_name)
-                self.update_clinets_list_display()
-                self.client_connection.sendall(b'valid credentials') # send ACK for client(valid ack)
-                self.save_connections_logs(client_name, client_ip[0], check_client, 'connection successful')
-                for c in self.clients_list:
-                    if c != self.client_connection:
-                        c.sendall(client_name.encode() + b" joined") # send message to other client when a user joins
-                new_client_msg = "New client -> Name : " + client_name + ", IP : " + client_ip[0]
-                print(new_client_msg)
-                self.clients_num += 1
-                self.clients_list.append(self.client_connection)
-                self.client_connection.sendall(b"Welcome " + client_name.encode()) # send welcome message to client
-                print("Number of clients : " + str(self.clients_num))
-                msgs_encoded = '\n'.join([f'{x},{y}' for x,y in self.get_messages()]).encode()
-                self.client_connection.sendall(msgs_encoded)
-
-                Thread(target=self.send_recv_clients_msg, args=(self.client_connection, client_name, client_ip[0],)).start()
-                Thread(target=self.send_server_signal, args=(self.client_connection,client_name,client_ip,)).start()
-
-            elif check_client == 'invalid credentials':
-                print("P3")
-                self.client_connection.sendall(b'invalid credentials') # send ACK for client(invalid ack)
-                self.client_connection.close()
-                self.save_connections_logs(client_name, client_ip[0], check_client, 'connection failed')
-                continue
-            # except OSError: # if you stop listening it will raise an OSError because of waiting time for accepting connection
-            #     pass
-            # except :
-            #     self.client_connection.close()
-            #     if self.client_connection in self.clients_list:
-            #         self.clients_list.remove(self.client_connection)
-            #     try:
-            #         if client_name in self.clients_name:
-            #             self.clients_name.remove(client_name)
-            #     except:
-            #         pass
-            #     else:
-            #         self.save_connections_logs(client_name, client_ip[0], "-", 'connection closed')
-
     def send_recv_clients_msg(self, client_connection, client_name, client_ip):
         '''function for receive and send client messages'''
 
@@ -424,8 +373,6 @@ class ServerManager():
         self.client_list_text_box.config(state='normal')
         self.client_list_text_box.delete('1.0', END)
         self.client_list_text_box.config(state='disabled')
-        # self.auth_status_check_button.config(state='normal')  # enable authentication check box after stop listening
-
 
 root = Tk()
 Gui = ServerManager(root)

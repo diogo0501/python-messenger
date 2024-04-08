@@ -37,8 +37,9 @@ wait_for_enter_key ""
 # SQL Injection command
 gnome-terminal -- python3 testClient.py --server-ip 0 --server-port 9000 --username ola --password pass --connection-type sign
 
+gnome-terminal -- python3 ClientGUI.py
 # SQL Injection command
-gnome-terminal -- python3 testClient.py --server-ip 0 --server-port 9000 --username hey --password "pass'); DROP TABLE users; --" --connection-type sign
-
+# gnome-terminal -- python3 testClient.py --server-ip 0 --server-port 9000 --username hey --password "pass'); DROP TABLE users; --" --connection-type sign
+# Command Injection eg : hi'), self.create_chat_window(), print('hi
 wait_for_enter_key "close"
 $SHELL

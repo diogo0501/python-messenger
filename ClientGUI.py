@@ -19,32 +19,38 @@ server_status = None # connection status with the server
 class LoginGui():
     def __init__(self, main_win): # main_win = tk.Tk()
         self.app_version = 'V2.1'
+
         # define GUI options
         self.chat_win_exist = None # If chat window exists it won't be None
         self.main_win = main_win # main window for login
         self.main_win.title('Messenger (Client) V2')
         self.main_win.geometry('750x200')
         self.main_win.resizable(1, 1)
+
         # setting user options
         self.lbl_user = Label(main_win, text='Name', padx=10, pady=10, font=('Tahoma', 15))
         self.lbl_user.grid(row=0, column=0)
         self.lbl_user_entry = Entry(main_win, font=('Tahoma', 11))
         self.lbl_user_entry.grid(row=0, column=1)
+
         # setting password options
         self.lbl_pass = Label(main_win, text='Password', padx=10, pady=10, font=('Tahoma', 15))
         self.lbl_pass.grid(row=0, column=2)
         self.lbl_pass_entry = Entry(main_win, show='*', font=('Tahoma', 11))
         self.lbl_pass_entry.grid(row=0, column=3)
+
         # setting server ip options
         self.server_ip_label = Label(main_win, text='Server IP', padx=10, pady=10, font=('Tahoma', 15))
         self.server_ip_label.grid(row=2, column=0)
         self.server_ip_entry = Entry(main_win, font=('Tahoma', 13))
         self.server_ip_entry.grid(row=2, column=1)
+
         # setting server connecting port options
         self.server_port_num = Label(main_win, text='Port', padx=10, pady=10, font=('Tahoma', 15))
         self.server_port_num.grid(row=2, column=2)
         self.server_port_entry = Entry(main_win, font=('Tahoma', 11))
         self.server_port_entry.grid(row=2, column=3)
+
         # setting default port check box
         self.default_port = StringVar()
         self.default_port_check_button = Checkbutton(main_win, font=('Tahoma', 15), text='Default port (54321)',
@@ -63,28 +69,36 @@ class LoginGui():
 
 
     def change_port_entry(self):
-        '''function for changing default port checkbox'''
+        '''Function for toggling the default port checkbox'''
+
         self.server_port_entry.delete(0, END)
-        # if it's on ,set value to 54321 and disable the port entry box
+        # if it's on, set value to 54321 and disable the port entry box
         if self.default_port.get() == 'on':
             self.server_port_entry.insert(0, '54321')
             self.server_port_entry.config(state='disabled')
+
         # if it's off ,clear the value and enable the port entry box
         elif self.default_port.get() == 'off':
             self.server_port_entry.delete(0, END)
             self.server_port_entry.config(state='normal')
 
     def create_chat_gui(self):
+        '''Function that creates a chat window'''
+
         if messagebox.askokcancel('Connection', 'If the chat window exists, it will be closed.'):
             if self.chat_win_exist and hasattr(self.chat_win_exist, 'chat_win'):
                 if self.chat_win_exist.chat_win.winfo_exists():
                     self.chat_win_exist.chat_win.destroy()  # Close the chat window
+
             self.chat_win_exist = ChatGui(self)  # Create chat window
 
 
-#class for chat room window(second window)
+# Chat window class
 class ChatGui():
+
     def __init__(self,info):
+
+        # set user and server info
         self.server_ip = info.server_ip_entry.get()
         self.port_num = info.server_port_entry.get()
         self.username = info.lbl_user_entry.get()
@@ -105,6 +119,7 @@ class ChatGui():
         elif len(self.port_num) < 1:
             messagebox.showerror('Error', 'Enter port number e.g. (54321) !')
             return
+        
         # check if the port number entere is valid(integer)
         if self.port_num :
             try:
@@ -113,52 +128,65 @@ class ChatGui():
                 messagebox.showerror('Error', 'port number must be integer e.g. (54321)')
                 return
 
-        # check input if they are entered and create the chat window for establishing the connection
+        # verify if all inputs are entered before creating the chat window to establish the connection
         if (len(str(self.port_num)) >= 1) and (len(self.username) >= 1) \
                 and (len(self.password) >= 1) and (len(self.username) >= 1) :
             self.create_chat_window()
 
     def create_chat_window(self):
-        '''function for creating chat window'''
+        '''Function that creates a chat window'''
+
         try_to_connect_or_not = messagebox.askokcancel('Connection', 'Connect ?')
+
         if try_to_connect_or_not == True:
+            
             # chat window properties
             self.chat_win = Tk()
             self.chat_win.title('Chat Room')
             self.chat_win.geometry('610x820')
             self.chat_win.resizable(1, 1)
+            
             # user info on top of the window
             chat_win_user_label = Label(self.chat_win, text=('Your name : ' + self.username), 
                                         font=('Tahoma', '15'))
             chat_win_user_label.pack()
+
             # connection status on top of the window
             self.chat_server_connection_status = Label(self.chat_win)
             self.chat_server_connection_status.pack()
-            self.chat_server_connection_status.config(text=('Server status :'), font=('Tahoma', '15'), fg='Blue')
+            self.chat_server_connection_status.config(text=('Server status :'), 
+                                                      font=('Tahoma', '15'), fg='Blue')
+            
             # first red connection status label before establishing the connection
             if server_status is None:
-                self.chat_server_connection_status.config(text=('Server status : Not connected'), font=('Tahoma', '15'), fg='Red')
+                self.chat_server_connection_status.config(text=('Server status : Not connected'), 
+                                                          font=('Tahoma', '15'), fg='Red')
             # set connect button settings
             self.sign_button = Button(self.chat_win, text='Sign in', font=('Tahoma', 15),
                                         command=lambda: self.connect_to_server('sign'))
                                          
             self.sign_button.pack()
+
             # set connect button settings
             self.login_button = Button(self.chat_win, text='Login', font=('Tahoma', 15), 
                                          command=lambda: self.connect_to_server('login'))
             self.login_button.pack()
+
             # setting the text box windows
             self.chat_room_text_box = Text(self.chat_win)
             self.chat_room_text_box.pack()
             self.chat_room_text_box.config(width='70', height='28', bg='#FFEFDF', state='disabled')
+            
             # setting a box for separating the messages text box and send message box
             chat_rooms_separate_text_box = Text(self.chat_win)
             chat_rooms_separate_text_box.pack()
             chat_rooms_separate_text_box.config(width=70, height='0', bg='#E6E6E6', state='disabled')
+            
             # setting the send box for sending messages
             self.send_message_text_box = Text(self.chat_win)
             self.send_message_text_box.pack()
             self.send_message_text_box.config(width='70', height='3', padx=5, pady=5, state='disabled')
+            
             # setting the send message button
             self.send_message_button = Button(self.chat_win)
             self.send_message_button.pack()
@@ -168,11 +196,12 @@ class ChatGui():
             self.chat_win.mainloop()
 
     def connect_to_server(self,conntype):
-        '''function for initial connection to the server'''
+        '''Function to establish the initial connection to the server'''
+        
         try:
+            
             self.client_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
             self.client_socket.connect((self.server_ip,self.port_num))
-            # credential format => user:username,pass:password;
             credential = 'conntype:' + conntype + ',user:' + self.username + ',pass:' + self.password + ';'
             self.client_socket.sendall(credential.encode())
 
@@ -181,10 +210,8 @@ class ChatGui():
             messagebox.showerror('Error', 'Connection failed !')
             return
         else:
-            # get ACK if credential is correct or 
-
             credential_ack = self.client_socket.recv(4096)
-            print(credential_ack)
+
             if credential_ack.decode() == 'invalid credentials':
                 self.client_socket.close()
                 messagebox.showerror('Error','Invalid credentials')
@@ -204,7 +231,6 @@ class ChatGui():
 
             try :
                 for _, message in msgs_decode:
-                    print(message)
                     self.update_text_display(message)
             
             except:
@@ -220,19 +246,19 @@ class ChatGui():
             Thread(target=self.send_client_signal).start() # start threading for sending signal messages
 
     def receive_msg(self):
-        '''function for getting clients messages from server'''
+        '''Function to retrieve messages from the server sent by clients.'''
+
         while True :
             try:
                 self.clients_message_from_server = self.client_socket.recv(4096)
                 if not self.clients_message_from_server : break
                 if (self.clients_message_from_server) and \
                         (self.clients_message_from_server.decode() != 'server signal') :
-                    # server signal is a message from server to check connection between itself and client
+                    
                     Thread(target=self.update_text_display,args=(self.clients_message_from_server,)).start()
 
             except:
                 self.client_socket.close()
-                # self.connect_button.config(state='normal')  # enable connect button
                 self.send_message_text_box.config(state='disabled')  # disable send message box
                 self.send_message_button.config(state='disabled')  # disable send message button
                 self.chat_server_connection_status.config(text=('Server status : Not connected'), 
@@ -243,20 +269,19 @@ class ChatGui():
     
 
     def send_msg(self):
-        '''
-        function for sending messages
-        this function will be called when send button is clicked
-        '''
+        '''Function for sending messages'''
 
         new_message = self.send_message_text_box.get('1.0',END)
+
         if 1 <= len(new_message.strip()) <= 100:
+
             local_message = 'You->' + new_message.strip()
             final_message = self.username + '->' + new_message.strip()
             self.chat_room_text_box.config(state='normal',fg='Black') # enable chat box for inserting message
 
-            # [VULNERABILITY] Command Injection
             eval("self.chat_room_text_box.insert(END,'" + local_message + "\\n'" + ")")
             self.chat_room_text_box.config(state='disabled') # disable chat box
+            
             try:
                 self.client_socket.sendall(final_message.encode())
             except:
@@ -265,10 +290,12 @@ class ChatGui():
                 self.send_message_button.config(state='disabled') # disable send message button
                 self.chat_server_connection_status.config(text=('Server status : Not connected'), 
                                                           font=('Tahoma', '15'), fg='Red')
+                
                 messagebox.showerror('Connection error','Connection is closed !')
 
             else:
                 self.send_message_text_box.delete('1.0', END)
+
         elif (len(new_message.strip()) < 1) :
             messagebox.showerror('Error','Your message must be at least 1 character !')
         elif (len(new_message.strip()) > 100) :
@@ -276,10 +303,8 @@ class ChatGui():
         else:
             messagebox.showerror('Error', 'Message can\'t be sent !')
 
-    def test_code_injection():
-        print("[DANGER] Code injected")
-
     def update_text_display(self, msg):
+        
         def _update_text():
             msg_new = msg.decode().strip() + '\n'
             self.chat_room_text_box.config(state='normal')
@@ -289,7 +314,8 @@ class ChatGui():
 
 
     def send_client_signal(self):
-        '''function for sending signal to server for checking connection between client and server'''
+        '''Function for sending a signal to the server to verify the connection between the client and server.'''
+        
         while True:
             sleep(5) # sending signal every 5 sec
             try:
@@ -300,6 +326,7 @@ class ChatGui():
                 self.send_message_button.config(state='disabled')  # disable send message button
                 self.chat_server_connection_status.config(text=('Server status : Not connected'), 
                                                           font=('Tahoma', '15'), fg='Red')
+                
                 messagebox.showerror('Connection error', 'Connection is closed !')
 
 root = tk.Tk()

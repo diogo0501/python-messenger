@@ -1,0 +1,919 @@
+{
+  "issues": [
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "BLOCKER",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Android Keystore\nAndroid Keystore",
+        "filePath": "src/Client.java",
+        "textRange": {
+          "startLine": 13,
+          "startColumn": 12
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "BLOCKER",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Potential Hard-coded credential\nThe software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.",
+        "filePath": "src/client/ClientStub.java",
+        "textRange": {
+          "startLine": 145,
+          "startColumn": 30
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "BLOCKER",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Potential Hard-coded credential\nThe software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.",
+        "filePath": "src/client/ClientStub.java",
+        "textRange": {
+          "startLine": 229,
+          "startColumn": 30
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "BLOCKER",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Potential Hard-coded credential\nThe software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.",
+        "filePath": "src/Client.java",
+        "textRange": {
+          "startLine": 312,
+          "startColumn": 8
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/models/PBEEncryptionObjects.java",
+        "textRange": {
+          "startLine": 5,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: No Default  Hash\nThis App uses  Hash Code. It\"s a weak hash function and should never be used in Secure Crypto Implementation. For more information checkout the CWE-327 (https://cwe.mitre.org/data/definitions/327.html) advisory.",
+        "filePath": "src/utils/models/ByteArray.java",
+        "textRange": {
+          "startLine": 25,
+          "startColumn": 14
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: No Default  Hash\nThis App uses  Hash Code. It\"s a weak hash function and should never be used in Secure Crypto Implementation. For more information checkout the CWE-327 (https://cwe.mitre.org/data/definitions/327.html) advisory.",
+        "filePath": "src/utils/models/ByteArray.java",
+        "textRange": {
+          "startLine": 26,
+          "startColumn": 21
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Insecure Random Number Generator\nThe App uses an insecure Random Number Generator. For more information checkout the CWE-330 (https://cwe.mitre.org/data/definitions/330.html) advisory.",
+        "filePath": "src/utils/Utils.java",
+        "textRange": {
+          "startLine": 18,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/models/Message.java",
+        "textRange": {
+          "startLine": 5,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/client/threads/TalkToThread.java",
+        "textRange": {
+          "startLine": 14,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/client/threads/TalkToThread.java",
+        "textRange": {
+          "startLine": 15,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/client/threads/TalkToThread.java",
+        "textRange": {
+          "startLine": 17,
+          "startColumn": 11
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/client/threads/TalkToThread.java",
+        "textRange": {
+          "startLine": 19,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/client/threads/TalkToThread.java",
+        "textRange": {
+          "startLine": 20,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/DatabaseUtils.java",
+        "textRange": {
+          "startLine": 8,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Weak block mode for Cryptographic Hash Function\nA weak ECB, (a.k.a 'block mode') was found in one of your Ciphers. Always use a strong, high entropy hash, for example the SHA-512 with salt options. For more information check CWE-327 (https://cwe.mitre.org/data/definitions/327.html), CWE-719 (https://cwe.mitre.org/data/definitions/719.html), CWE-326 (https://cwe.mitre.org/data/definitions/326.html) and CWE-780 (https://cwe.mitre.org/data/definitions/780.html) for deeper details on how to fix it.",
+        "filePath": "src/utils/SSEUtils.java",
+        "textRange": {
+          "startLine": 34,
+          "startColumn": 16
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Weak block mode for Cryptographic Hash Function\nA weak ECB, (a.k.a 'block mode') was found in one of your Ciphers. Always use a strong, high entropy hash, for example the SHA-512 with salt options. For more information check CWE-327 (https://cwe.mitre.org/data/definitions/327.html), CWE-719 (https://cwe.mitre.org/data/definitions/719.html), CWE-326 (https://cwe.mitre.org/data/definitions/326.html) and CWE-780 (https://cwe.mitre.org/data/definitions/780.html) for deeper details on how to fix it.",
+        "filePath": "src/utils/SSEUtils.java",
+        "textRange": {
+          "startLine": 74,
+          "startColumn": 16
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Weak block mode for Cryptographic Hash Function\nA weak ECB, (a.k.a 'block mode') was found in one of your Ciphers. Always use a strong, high entropy hash, for example the SHA-512 with salt options. For more information check CWE-327 (https://cwe.mitre.org/data/definitions/327.html), CWE-719 (https://cwe.mitre.org/data/definitions/719.html), CWE-326 (https://cwe.mitre.org/data/definitions/326.html) and CWE-780 (https://cwe.mitre.org/data/definitions/780.html) for deeper details on how to fix it.",
+        "filePath": "src/utils/SSEUtils.java",
+        "textRange": {
+          "startLine": 34,
+          "startColumn": 16
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Weak block mode for Cryptographic Hash Function\nA weak ECB, (a.k.a 'block mode') was found in one of your Ciphers. Always use a strong, high entropy hash, for example the SHA-512 with salt options. For more information check CWE-327 (https://cwe.mitre.org/data/definitions/327.html), CWE-719 (https://cwe.mitre.org/data/definitions/719.html), CWE-326 (https://cwe.mitre.org/data/definitions/326.html) and CWE-780 (https://cwe.mitre.org/data/definitions/780.html) for deeper details on how to fix it.",
+        "filePath": "src/utils/SSEUtils.java",
+        "textRange": {
+          "startLine": 74,
+          "startColumn": 16
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/SSEUtils.java",
+        "textRange": {
+          "startLine": 15,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/SSEUtils.java",
+        "textRange": {
+          "startLine": 16,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/SSEUtils.java",
+        "textRange": {
+          "startLine": 17,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/SSEUtils.java",
+        "textRange": {
+          "startLine": 18,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/SSEUtils.java",
+        "textRange": {
+          "startLine": 19,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/SSEUtils.java",
+        "textRange": {
+          "startLine": 20,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/SSEUtils.java",
+        "textRange": {
+          "startLine": 21,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/models/SSEObjects.java",
+        "textRange": {
+          "startLine": 7,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/models/SSEObjects.java",
+        "textRange": {
+          "startLine": 8,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/models/SSEObjects.java",
+        "textRange": {
+          "startLine": 9,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/models/SSEObjects.java",
+        "textRange": {
+          "startLine": 10,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Weak block mode for Cryptographic Hash Function\nA weak ECB, (a.k.a 'block mode') was found in one of your Ciphers. Always use a strong, high entropy hash, for example the SHA-512 with salt options. For more information check CWE-327 (https://cwe.mitre.org/data/definitions/327.html), CWE-719 (https://cwe.mitre.org/data/definitions/719.html), CWE-326 (https://cwe.mitre.org/data/definitions/326.html) and CWE-780 (https://cwe.mitre.org/data/definitions/780.html) for deeper details on how to fix it.",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 84,
+          "startColumn": 19
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Weak block mode for Cryptographic Hash Function\nA weak ECB, (a.k.a 'block mode') was found in one of your Ciphers. Always use a strong, high entropy hash, for example the SHA-512 with salt options. For more information check CWE-327 (https://cwe.mitre.org/data/definitions/327.html), CWE-719 (https://cwe.mitre.org/data/definitions/719.html), CWE-326 (https://cwe.mitre.org/data/definitions/326.html) and CWE-780 (https://cwe.mitre.org/data/definitions/780.html) for deeper details on how to fix it.",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 97,
+          "startColumn": 19
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Weak block mode for Cryptographic Hash Function\nA weak ECB, (a.k.a 'block mode') was found in one of your Ciphers. Always use a strong, high entropy hash, for example the SHA-512 with salt options. For more information check CWE-327 (https://cwe.mitre.org/data/definitions/327.html), CWE-719 (https://cwe.mitre.org/data/definitions/719.html), CWE-326 (https://cwe.mitre.org/data/definitions/326.html) and CWE-780 (https://cwe.mitre.org/data/definitions/780.html) for deeper details on how to fix it.",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 84,
+          "startColumn": 19
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Weak block mode for Cryptographic Hash Function\nA weak ECB, (a.k.a 'block mode') was found in one of your Ciphers. Always use a strong, high entropy hash, for example the SHA-512 with salt options. For more information check CWE-327 (https://cwe.mitre.org/data/definitions/327.html), CWE-719 (https://cwe.mitre.org/data/definitions/719.html), CWE-326 (https://cwe.mitre.org/data/definitions/326.html) and CWE-780 (https://cwe.mitre.org/data/definitions/780.html) for deeper details on how to fix it.",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 97,
+          "startColumn": 19
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 10,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 11,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 12,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 13,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 14,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 15,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/Client.java",
+        "textRange": {
+          "startLine": 31,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/Client.java",
+        "textRange": {
+          "startLine": 32,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/Client.java",
+        "textRange": {
+          "startLine": 33,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/Client.java",
+        "textRange": {
+          "startLine": 34,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/Client.java",
+        "textRange": {
+          "startLine": 35,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/Client.java",
+        "textRange": {
+          "startLine": 36,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/client/ClientStub.java",
+        "textRange": {
+          "startLine": 26,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/client/ClientStub.java",
+        "textRange": {
+          "startLine": 27,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/client/ClientStub.java",
+        "textRange": {
+          "startLine": 28,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "CRITICAL",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected:  Crypto import\n Crypto import",
+        "filePath": "src/client/ClientStub.java",
+        "textRange": {
+          "startLine": 29,
+          "startColumn": 7
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "MAJOR",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Static IV\nInitialization vector must be regenerated for each message to be encrypted. For more information checkout the CWE-329 (https://cwe.mitre.org/data/definitions/329.html) advisory",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 50,
+          "startColumn": 14
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "MAJOR",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Base64 Encode\nBasic authentication's only means of obfuscation is Base64 encoding. Since Base64 encoding is easily recognized and reversed, it offers only the thinnest veil of protection to your users, and should not be used.",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 27,
+          "startColumn": 40
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "MAJOR",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Base64 Encode\nBasic authentication's only means of obfuscation is Base64 encoding. Since Base64 encoding is easily recognized and reversed, it offers only the thinnest veil of protection to your users, and should not be used.",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 61,
+          "startColumn": 34
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "MAJOR",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Base64 Encode\nBasic authentication's only means of obfuscation is Base64 encoding. Since Base64 encoding is easily recognized and reversed, it offers only the thinnest veil of protection to your users, and should not be used.",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 87,
+          "startColumn": 34
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "MINOR",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: TCP Server Socket\nTCP Server Socket",
+        "filePath": "src/client/threads/AcceptConnectionsThread.java",
+        "textRange": {
+          "startLine": 97,
+          "startColumn": 18
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "MINOR",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: TCP Server Socket\nTCP Server Socket",
+        "filePath": "src/Server.java",
+        "textRange": {
+          "startLine": 81,
+          "startColumn": 18
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "MINOR",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Base64 Decode\nBase64 Decode",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 40,
+          "startColumn": 39
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "MINOR",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Base64 Decode\nBase64 Decode",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 73,
+          "startColumn": 51
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "MINOR",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: Base64 Decode\nBase64 Decode",
+        "filePath": "src/utils/EncryptionUtils.java",
+        "textRange": {
+          "startLine": 99,
+          "startColumn": 56
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "MINOR",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: TCP Socket\nTCP Socket",
+        "filePath": "src/Client.java",
+        "textRange": {
+          "startLine": 259,
+          "startColumn": 12
+        }
+      }
+    },
+    {
+      "type": "VULNERABILITY",
+      "ruleId": "HorusecEngine",
+      "engineId": "horusec",
+      "severity": "MINOR",
+      "effortMinutes": 0,
+      "primaryLocation": {
+        "message": "(1/1) * Possible vulnerability detected: TCP Socket\nTCP Socket",
+        "filePath": "src/client/ClientStub.java",
+        "textRange": {
+          "startLine": 135,
+          "startColumn": 19
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+
+Testing /home/diogo/Desktop/MODC_Project/xvj23/P2PMessagingApp_MODC1_TP21 ...
+
+ ✗ [Low] Use of Password Hash With Insufficient Computational Effort 
+   Path: src/utils/SSEUtils.java, line 33 
+   Info: The HmacSHA1 hash (used in javax.crypto.Mac.getInstance) is insecure. Consider changing it to a secure hash algorithm
+
+ ✗ [Low] Use of Password Hash With Insufficient Computational Effort 
+   Path: src/utils/SSEUtils.java, line 73 
+   Info: The HmacSHA1 hash (used in javax.crypto.Mac.getInstance) is insecure. Consider changing it to a secure hash algorithm
+
+ ✗ [Medium] Deserialization of Untrusted Data 
+   Path: src/Client.java, line 111 
+   Info: Unsanitized input from a command line argument flows into java.io.ObjectInputStream, where it is used to deserialize an object. This may result in an Unsafe Deserialization vulnerability.
+
+ ✗ [Medium] Deserialization of Untrusted Data 
+   Path: src/Client.java, line 324 
+   Info: Unsanitized input from a command line argument flows into java.io.ObjectInputStream, where it is used to deserialize an object. This may result in an Unsafe Deserialization vulnerability.
+
+ ✗ [Medium] Path Traversal 
+   Path: src/server/threads/ServerThread.java, line 30 
+   Info: Unsanitized input from data from a remote resource flows into java.io.FileOutputStream, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write to arbitrary files.
+
+ ✗ [Medium] Path Traversal 
+   Path: src/server/threads/ServerThread.java, line 46 
+   Info: Unsanitized input from data from a remote resource flows into java.io.FileInputStream, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [Medium] Path Traversal 
+   Path: src/Client.java, line 111 
+   Info: Unsanitized input from a command line argument flows into java.io.FileInputStream, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [Medium] Path Traversal 
+   Path: src/Client.java, line 270 
+   Info: Unsanitized input from a command line argument flows into java.io.FileInputStream, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [Medium] Path Traversal 
+   Path: src/Client.java, line 324 
+   Info: Unsanitized input from a command line argument flows into java.io.FileInputStream, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [Medium] Path Traversal 
+   Path: src/Client.java, line 340 
+   Info: Unsanitized input from a command line argument flows into java.io.FileInputStream, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [Medium] Path Traversal 
+   Path: src/Client.java, line 122 
+   Info: Unsanitized input from a command line argument flows into java.io.FileOutputStream, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write to arbitrary files.
+
+ ✗ [Medium] Path Traversal 
+   Path: src/Client.java, line 230 
+   Info: Unsanitized input from a command line argument flows into java.io.FileOutputStream, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write to arbitrary files.
+
+ ✗ [Medium] Path Traversal 
+   Path: src/Client.java, line 348 
+   Info: Unsanitized input from a command line argument flows into java.io.FileOutputStream, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write to arbitrary files.
+
+ ✗ [Medium] Observable Timing Discrepancy (Timing Attack) 
+   Path: src/client/threads/TalkToThread.java, line 80 
+   Info: An attacker can guess the secret value of doFinal because it is compared using java.util.Arrays.equals, which is vulnerable to timing attacks. Use java.security.MessageDigest.isEqual to compare values securely.
+
+ ✗ [Medium] Inadequate Padding for AES encryption 
+   Path: src/utils/EncryptionUtils.java, line 84 
+   Info: AES with CBC mode and PKCS5Padding (AES/CBC/PKCS5Padding) used in javax.crypto.Cipher.getInstance is vulnerable to padding oracle attacks. Consider using Galois/Counter Mode (algorithm AES/GCM/NoPadding).
+
+ ✗ [Medium] Inadequate Padding for AES encryption 
+   Path: src/utils/EncryptionUtils.java, line 97 
+   Info: AES with CBC mode and PKCS5Padding (AES/CBC/PKCS5Padding) used in javax.crypto.Cipher.getInstance is vulnerable to padding oracle attacks. Consider using Galois/Counter Mode (algorithm AES/GCM/NoPadding).
+
+ ✗ [Medium] Inadequate Padding for AES encryption 
+   Path: src/utils/SSEUtils.java, line 34 
+   Info: AES with CBC mode and PKCS5Padding (AES/CBC/PKCS5Padding) used in javax.crypto.Cipher.getInstance is vulnerable to padding oracle attacks. Consider using Galois/Counter Mode (algorithm AES/GCM/NoPadding).
+
+ ✗ [Medium] Inadequate Padding for AES encryption 
+   Path: src/utils/SSEUtils.java, line 74 
+   Info: AES with CBC mode and PKCS5Padding (AES/CBC/PKCS5Padding) used in javax.crypto.Cipher.getInstance is vulnerable to padding oracle attacks. Consider using Galois/Counter Mode (algorithm AES/GCM/NoPadding).
+
+ ✗ [Medium] Use of a Broken or Risky Cryptographic Algorithm 
+   Path: src/utils/EncryptionUtils.java, line 84 
+   Info: The CBC mode used in javax.crypto.Cipher.getInstance does not provide integrity. Consided using Galois/Counter Mode.
+
+ ✗ [Medium] Use of a Broken or Risky Cryptographic Algorithm 
+   Path: src/utils/EncryptionUtils.java, line 97 
+   Info: The CBC mode used in javax.crypto.Cipher.getInstance does not provide integrity. Consided using Galois/Counter Mode.
+
+ ✗ [Medium] Use of a Broken or Risky Cryptographic Algorithm 
+   Path: src/utils/SSEUtils.java, line 34 
+   Info: The CBC mode used in javax.crypto.Cipher.getInstance does not provide integrity. Consided using Galois/Counter Mode.
+
+ ✗ [Medium] Use of a Broken or Risky Cryptographic Algorithm 
+   Path: src/utils/SSEUtils.java, line 74 
+   Info: The CBC mode used in javax.crypto.Cipher.getInstance does not provide integrity. Consided using Galois/Counter Mode.
+
+ ✗ [Medium] SQL Injection 
+   Path: src/server/threads/ServerThread.java, line 53 
+   Info: Unsanitized input from data from a remote resource flows into executeUpdate, where it is used in an SQL query. This may result in an SQL Injection vulnerability.
+
+ ✗ [High] Hardcoded Secret 
+   Path: src/Client.java, line 308 
+   Info: Hardcoded value array {...} is used as a cipher salt. Generate the value with a cryptographically strong random number generator such as java.security.SecureRandom instead.
+
+
+✔ Test completed
+
+Organization:      ad26f52b-cfb0-4fec-a5da-7d1381ac970e
+Test type:         Static code analysis
+Project path:      /home/diogo/Desktop/MODC_Project/xvj23/P2PMessagingApp_MODC1_TP21
+
+Summary:
+
+  24 Code issues found
+  1 [High]   21 [Medium]   2 [Low] 
+
+

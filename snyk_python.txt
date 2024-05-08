@@ -1,0 +1,20 @@
+
+Testing /home/diogo/Desktop/MODC_Project/abc21/Software/app ...
+
+ ✗ [Medium] Debug Mode Enabled 
+   Path: app.py, line 38 
+   Info: Running the application in debug mode (debug flag is set to True in run) is a security risk if the application is accessible by untrusted parties.
+
+
+✔ Test completed
+
+Organization:      ad26f52b-cfb0-4fec-a5da-7d1381ac970e
+Test type:         Static code analysis
+Project path:      /home/diogo/Desktop/MODC_Project/abc21/Software/app
+
+Summary:
+
+  1 Code issues found
+  1 [Medium] 
+
+

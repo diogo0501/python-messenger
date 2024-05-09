@@ -1,1 +1,4 @@
-Vulnerability,Description,Group,File,Line,Severity,Tool Used
+Vulnerability,Description,Project Id,File,Line,Severity,Tool Used
+SQL injection, SQL injection vector through string-based query construction, abc21, db_acess.py, 51, Medium, Bandit
+Stored XSS, Injection of malicious executable scripts into code, abc21, home.py, 14, Medium, ZAP
+Insecure Communication, TRrnsmission of data over network without adequate protection against interception or tampering, abc21, auth.py, 13,High, Wireshark

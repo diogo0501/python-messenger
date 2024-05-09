@@ -1,8 +1,12 @@
 Vulnerability, CWE Id, Description,Project Id,File,Line,Severity,Tool Used
-SQL injection,89, SQL injection vector through string-based query construction, abc21, db_acess.py, 51, Medium, Bandit
+SQL injection,89, SQL injection vector through string-based query construction, abc21, db_acess.py, 51, High, Bandit
 Stored XSS, 707, Injection of malicious executable scripts into code, abc21, home.py, 14, Medium, ZAP
 Insecure Communication, 319, Transmission of data over network without adequate protection against interception or tampering, abc21, auth.py, 13, High, Wireshark
 Active Debug Code, 489, Debugging code enabled or active which create unintended entry point or expose sensitive information, abc21, app.py, 38, High, Bandit
-Missing Anti-CSRF Tokens, 352, No verification on wether a well-formed or valid request was provided by the user, abc21, NA, NA, Medium, ZAP
+Missing Anti-CSRF Tokens, 352, No verification on wether a well-formed or valid request was provided by the user, abc21, auth.py, 11, Medium, ZAP
 CSP Header not set,693, No protection against directed attacks,abc21, NA, NA, Medium, ZAP
 Missing Anti-clickjacking Header, 1021, Incorrect restriction of frame object or UI layers originating from another application,abc21, NA, NA, Medium, ZAP
+SQL injection, 89, SQL injection vector through string-based query construction, xvj23, ServerSkel.java, 345, High, Sonarqube
+Insecure Communication, 319, Transmission of data over network without adequate protection against interception or tampering, xvj23, ServerSkel.java, 230, High, Wireshark
+Active Debug Code, 489, Debugging code enabled or active which create unintended entry point or expose sensitive information, xvj23, Utils.java, 78, High, Sonarqube
+Weak Cryptographic Hash: Hardcoded PBE Salt,798,A weak cryptographic hash occurs due to a hardcoded PBE (Password-Based Encryption) salt compromising the security of the system,xvj23,Client.java, 306, Medium, Horusec

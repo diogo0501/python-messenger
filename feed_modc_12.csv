@@ -1,5 +1,9 @@
 Vulnerability, CWE Id, Description,Project Id,File,Line,Severity,Tool Used
+SQL injection,89, SQL injection vector through string-based query construction, abc21, db_acess.py, 13, High, Bandit
+SQL injection,89, SQL injection vector through string-based query construction, abc21, db_acess.py, 35, High, Bandit
 SQL injection,89, SQL injection vector through string-based query construction, abc21, db_acess.py, 51, High, Bandit
+SQL injection,89, SQL injection vector through string-based query construction, abc21, db_acess.py, 64, High, Bandit
+SQL injection,89, SQL injection vector through string-based query construction, abc21, db_acess.py, 82, High, Bandit
 Stored XSS, 707, Injection of malicious executable scripts into code, abc21, home.py, 14, Medium, ZAP
 Insecure Communication, 319, Transmission of data over network without adequate protection against interception or tampering, abc21, auth.py, 13, High, Wireshark
 Active Debug Code, 489, Debugging code enabled or active which create unintended entry point or expose sensitive information, abc21, app.py, 38, High, Bandit
@@ -10,3 +14,4 @@ SQL injection, 89, SQL injection vector through string-based query construction,
 Insecure Communication, 319, Transmission of data over network without adequate protection against interception or tampering, xvj23, ServerSkel.java, 230, High, Wireshark
 Active Debug Code, 489, Debugging code enabled or active which create unintended entry point or expose sensitive information, xvj23, Utils.java, 78, High, Sonarqube
 Weak Cryptographic Hash: Hardcoded PBE Salt,798,A weak cryptographic hash occurs due to a hardcoded PBE (Password-Based Encryption) salt compromising the security of the system,xvj23,Client.java, 306, Medium, Horusec
+Insecure Random Number Generator,330, Insufficiently random numbers or values in a security context, xvj23, Utils.java, High,Horusec

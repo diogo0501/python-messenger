@@ -14,4 +14,4 @@ SQL injection, 89, SQL injection vector through string-based query construction,
 Insecure Communication, 319, Transmission of data over network without adequate protection against interception or tampering, xvj23, ServerSkel.java, 230, High, Wireshark
 Active Debug Code, 489, Debugging code enabled or active which create unintended entry point or expose sensitive information, xvj23, Utils.java, 78, High, Sonarqube
 Weak Cryptographic Hash: Hardcoded PBE Salt,798,A weak cryptographic hash occurs due to a hardcoded PBE (Password-Based Encryption) salt compromising the security of the system,xvj23,Client.java, 306, Medium, Horusec
-Insecure Random Number Generator,330, Insufficiently random numbers or values in a security context, xvj23, Utils.java, High,Horusec
+Insecure Random Number Generator,330, Insufficiently random numbers or values in a security context, xvj23, Utils.java, 18, High,Horusec

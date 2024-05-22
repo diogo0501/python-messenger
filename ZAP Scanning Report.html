@@ -1,0 +1,2492 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZAP Scanning Report</title>
+<link href="./ZAP Scanning Report_files/normalize.css" rel="stylesheet">
+<link href="./ZAP Scanning Report_files/main.css" rel="stylesheet">
+<link href="./ZAP Scanning Report_files/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>ZAP Scanning Report</h1>
+		<p>
+			<span>Generated with</span> <a href="https://zaproxy.org/"><img src="./ZAP Scanning Report_files/zap32x32.png" alt="The ZAP logo" class="zap-logo">ZAP</a>
+			<span>on quarta 22 mai 2024, at 00:41:07</span>
+		</p>
+		<p>ZAP Version: 2.15.0</p>
+		<p>
+			ZAP is supported by the <a href="https://crashoverride.com/?zap=rep">Crash Override Open Source Fellowship</a>
+		</p>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2>Contents</h2>
+			<nav>
+				<ol>
+					<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#about-this-report">About this report</a>
+						<ol>
+							
+							<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#report-parameters">Report parameters</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#summaries">Summaries</a>
+						<ol>
+							<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#risk-confidence-counts">Alert counts by risk and confidence</a></li>
+							<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#site-risk-counts">Alert counts by site and risk</a></li>
+							<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-counts">Alert counts by alert type</a></li>
+						</ol></li>
+					<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alerts">Alerts</a>
+						<ol>
+							
+							
+							
+							
+							
+							
+							
+							<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alerts--risk-3-confidence-2"><span>Risk</span>=<span class="risk-level">Alto</span>, <span>Confidence</span>=<span class="confidence-level">Médio</span> <span>(1)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alerts--risk-2-confidence-3"><span>Risk</span>=<span class="risk-level">Médio</span>, <span>Confidence</span>=<span class="confidence-level">Alto</span> <span>(2)</span></a></li>
+							
+							<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alerts--risk-2-confidence-2"><span>Risk</span>=<span class="risk-level">Médio</span>, <span>Confidence</span>=<span class="confidence-level">Médio</span> <span>(2)</span></a></li>
+							
+							<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alerts--risk-2-confidence-1"><span>Risk</span>=<span class="risk-level">Médio</span>, <span>Confidence</span>=<span class="confidence-level">Baixo</span> <span>(2)</span></a></li>
+							  
+							
+							
+							
+							
+							<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alerts--risk-1-confidence-3"><span>Risk</span>=<span class="risk-level">Baixo</span>, <span>Confidence</span>=<span class="confidence-level">Alto</span> <span>(1)</span></a></li>
+							
+							<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alerts--risk-1-confidence-2"><span>Risk</span>=<span class="risk-level">Baixo</span>, <span>Confidence</span>=<span class="confidence-level">Médio</span> <span>(2)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							
+							
+							<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alerts--risk-0-confidence-2"><span>Risk</span>=<span class="risk-level">Informational</span>, <span>Confidence</span>=<span class="confidence-level">Médio</span> <span>(1)</span></a></li>
+							
+							<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alerts--risk-0-confidence-1"><span>Risk</span>=<span class="risk-level">Informational</span>, <span>Confidence</span>=<span class="confidence-level">Baixo</span> <span>(1)</span></a></li>
+							  
+						</ol></li>
+					<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#appendix">Appendix</a>
+						<ol>
+							<li><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-types">Alert types</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section id="about-this-report" class="about-this-report">
+			<h2>About this report</h2>
+
+			
+
+			<section id="report-parameters">
+				<h3>Report parameters</h3>
+				<div class="report-parameters--container">
+					<h4>Contexts</h4>
+					
+					
+					<p>No contexts were selected, so all contexts were included by default.</p>
+					  
+
+					<h4>Sites</h4>
+					
+					<p>The following sites were included:</p>
+					<ul class="sites-list">
+						<li><span class="site">http://localhost</span></li>
+					</ul>
+					
+					<p>(If no sites were selected, all sites were included by default.)</p>
+					<p>An included site must also be within one of the included contexts for its data to be included in the report.</p>
+
+					<h4>Risk levels</h4>
+					<p>
+						<span>Included</span>:
+						 
+						<span class="included-risk-codes"><span class="risk-level">Alto</span>, <span class="risk-level">Médio</span>, <span class="risk-level">Baixo</span>, <span class="risk-level">Informational</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						 <span>None</span>
+						
+					</p>
+
+					<h4>Confidence levels</h4>
+					<p>
+						<span>Included</span>:
+						
+						
+						<span class="included-confidence-codes"><span class="confidence-level">User Confirmed</span>, <span class="confidence-level">Alto</span>, <span class="confidence-level">Médio</span>, <span class="confidence-level">Baixo</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						
+						
+						<span class="included-confidence-codes"> <span class="confidence-level">User Confirmed</span>, <span class="confidence-level">Alto</span>, <span class="confidence-level">Médio</span>, <span class="confidence-level">Baixo</span>, <span class="confidence-level">Falso Positivo</span></span>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2>Summaries</h2>
+
+			<section id="risk-confidence-counts">
+				<h3>Alert counts by risk and confidence</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p>This table shows the number of alerts for each level of risk and confidence included in the report.</p>
+						<p>(The percentages in brackets represent the count as a percentage of the total number of alerts included in the report, rounded to one decimal place.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col style="width: 14.0%"><col style="width: 14.0%"><col style="width: 14.0%"><col style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="5">Confidence</th>
+						</tr>
+						<tr>
+							<th scope="col">User Confirmed</th>
+							<th scope="col">Alto</th>
+							<th scope="col">Médio</th>
+							<th scope="col">Baixo</th>
+							<th scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup" rowspan="5">Risk</th>
+							<th scope="row">Alto</th>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(8,3%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(8,3%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Médio</th>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(16,7%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(16,7%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(16,7%)</span></td>
+							<td><span>6</span><br> <span class="additional-info-percentages">(50,0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Baixo</th>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(8,3%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(16,7%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(25,0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Informational</th>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(8,3%)</span></td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(8,3%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(16,7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row">Total</th>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(25,0%)</span></td>
+							<td><span>6</span><br> <span class="additional-info-percentages">(50,0%)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(25,0%)</span></td>
+							<td><span>12</span><br> <span class="additional-info-percentages">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="site-risk-counts">
+				<h3>Alert counts by site and risk</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p>This table shows, for each site for which one or more alerts were raised, the number of alerts raised at each risk level.</p>
+						<p>Alerts with a confidence level of "False Positive" have been excluded from these counts.</p>
+						<p>(The numbers in brackets are the number of alerts raised for the site at or above that risk level.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col style="width: 16.25%"><col style="width: 16.25%"><col style="width: 16.25%"><col style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4">Risk</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span>Alto</span><br>  <span class="additional-info-percentages">(= Alto)</span>  
+							</th>
+							<th scope="col">
+								<span>Médio</span><br>   <span class="additional-info-percentages">(&gt;= Médio)</span> 
+							</th>
+							<th scope="col">
+								<span>Baixo</span><br>   <span class="additional-info-percentages">(&gt;= Baixo)</span> 
+							</th>
+							<th scope="col">
+								<span>Informational</span><br>   <span class="additional-info-percentages">(&gt;= Informational)</span> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup" rowspan="1">Site</th>
+							<th scope="row">http://localhost</th>
+							
+							<td><span>1</span><br> <span class="additional-info-percentages">(1)</span></td>
+							<td><span>6</span><br> <span class="additional-info-percentages">(7)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(10)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(12)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="alert-type-counts">
+				<h3>Alert counts by alert type</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p>This table shows the number of alerts of each alert type, together with the alert type's risk level.</p>
+						<p>(The percentages in brackets represent each count as a percentage, rounded to one decimal place, of the total number of alerts included in this report.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Alert type</th>
+							<th scope="col">Risk</th>
+							<th scope="col">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-0">SQL Injection</a></th>
+							<td class="risk-level">Alto</td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(8,3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-1">Absence of Anti-CSRF Tokens</a></th>
+							<td class="risk-level">Médio</td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(33,3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-2">Content Security Policy (CSP) Header Not Set</a></th>
+							<td class="risk-level">Médio</td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(33,3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-3">Directory Browsing</a></th>
+							<td class="risk-level">Médio</td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(8,3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-4">Hidden File Found</a></th>
+							<td class="risk-level">Médio</td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(8,3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-5">Missing Anti-clickjacking Header</a></th>
+							<td class="risk-level">Médio</td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(16,7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-6">Parameter Tampering</a></th>
+							<td class="risk-level">Médio</td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(8,3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-7">Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)</a></th>
+							<td class="risk-level">Baixo</td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(16,7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-8">Server Leaks Version Information via "Server" HTTP Response Header Field</a></th>
+							<td class="risk-level">Baixo</td>
+							<td><span>8</span><br> <span class="additional-info-percentages">(66,7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-9">X-Content-Type-Options Header Missing</a></th>
+							<td class="risk-level">Baixo</td>
+							<td><span>6</span><br> <span class="additional-info-percentages">(50,0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-10">User Agent Fuzzer</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>27</span><br> <span class="additional-info-percentages">(225,0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-11">User Controllable HTML Element Attribute (Potential XSS)</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(16,7%)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row">Total</th>
+							<td></td>
+							<td>12</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2>Alerts</h2>
+			<ol>
+				
+				 
+				
+				
+				
+				
+				<li id="alerts--risk-3-confidence-2">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">Alto</span>, <span>Confidence</span>=<span class="confidence-level">Médio</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-0">SQL Injection</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST http://localhost/Vulnerable-Web-Application/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A1_2017-Injection.html">OWASP_2017_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A03_2021-Injection/">OWASP_2021_A03</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/89.html">CWE-89</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection">WSTG-v42-INPV-05</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>SQL injection may be possible.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The page results were successfully manipulated using the boolean conditions [Enter AND 1=1 -- ] and [Enter OR 1=1 -- ]</p>
+
+<p>The parameter value being modified was stripped from the HTML output for the purposes of the comparison</p>
+
+<p>Data was NOT returned for the original parameter.</p>
+
+<p>The vulnerability was detected by successfully retrieving more data than originally returned, by manipulating the parameter</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (340 bytes)</summary>
+				
+				<pre><code>POST http://localhost/Vulnerable-Web-Application/ HTTP/1.1
+host: localhost
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+content-type: application/x-www-form-urlencoded
+referer: http://localhost/Vulnerable-Web-Application/
+content-length: 26
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (26 bytes)</summary>
+				
+				<pre><code>submit=Enter+AND+1%3D1+--+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (200 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Tue, 21 May 2024 23:34:11 GMT
+Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+X-Powered-By: PHP/8.2.12
+Content-Length: 1607
+Content-Type: text/html; charset=UTF-8
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1607 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;SETUP&lt;/title&gt;
+&lt;link rel="shortcut icon" href="Resources/hmbct.png" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;link rel="stylesheet" href="Resources/button.css"&gt;
+  &lt;div class="button" align="center" style="background-color:#757575;padding:10px;border-radius:80px 80px 0px 0px"&gt;
+    &lt;button type="button" name="homepagebutton" onclick="location.href='homepage.html'"&gt;Home Page&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;/link&gt;
+  &lt;div align="center" style="background-color:#c9c9c9;padding:150px;"&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Create Database:&amp;ensp;&lt;/label&gt;
+      &lt;input type="submit" name="submit" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Restore Database:&lt;/label&gt;
+      &lt;input type="submit" name="submit1" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+  &lt;/div&gt;
+
+&lt;div align="center" style="background-color:#afafaf;padding:60px;border-radius:0px 0px 80px 80px"&gt;
+Connected successfully  &lt;/br&gt;&lt;br /&gt;
+&lt;b&gt;Fatal error&lt;/b&gt;:  Uncaught mysqli_sql_exception: Can't create database '1ccb8097d0e9ce9f154608be60224c7c'; database exists in C:\xampp\htdocs\Vulnerable-Web-Application\index.php:66
+Stack trace:
+#0 C:\xampp\htdocs\Vulnerable-Web-Application\index.php(66): mysqli_query(Object(mysqli), 'CREATE Database...')
+#1 C:\xampp\htdocs\Vulnerable-Web-Application\index.php(39): create_database(Object(mysqli))
+#2 {main}
+  thrown in &lt;b&gt;C:\xampp\htdocs\Vulnerable-Web-Application\index.php&lt;/b&gt; on line &lt;b&gt;66&lt;/b&gt;&lt;br /&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>submit</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Attack</th>
+		<td><pre><code>Enter OR 1=1 -- </code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Do not trust client side input, even if there is client side validation in place.</p>
+
+<p>In general, type check all data on the server side.</p>
+
+<p>If the application uses JDBC, use PreparedStatement or CallableStatement, with parameters passed by '?'</p>
+
+<p>If the application uses ASP, use ADO Command Objects with strong type checking and parameterized queries.</p>
+
+<p>If database Stored Procedures can be used, use them.</p>
+
+<p>Do *not* concatenate strings into queries in the stored procedure, or use 'exec', 'exec immediate', or equivalent functionality!</p>
+
+<p>Do not create dynamic SQL queries using simple string concatenation.</p>
+
+<p>Escape all data received from the client.</p>
+
+<p>Apply an 'allow list' of allowed characters, or a 'deny list' of disallowed characters in user input.</p>
+
+<p>Apply the principle of least privilege by using the least privileged database user possible.</p>
+
+<p>In particular, avoid using the 'sa' or 'db-owner' database users. This does not eliminate SQL injection, but minimizes its impact.</p>
+
+<p>Grant the minimum database access that is necessary for the application.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">Médio</span>, <span>Confidence</span>=<span class="confidence-level">Alto</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost</span> <span>(2)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-2">Content Security Policy (CSP) Header Not Set</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost/sitemap.xml</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (199 bytes)</summary>
+				
+				<pre><code>GET http://localhost/sitemap.xml HTTP/1.1
+host: localhost
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (185 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404 Not Found
+Date: Tue, 21 May 2024 23:34:00 GMT
+Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+Content-Length: 295
+Content-Type: text/html; charset=iso-8859-1
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (295 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;404 Not Found&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Not Found&lt;/h1&gt;
+&lt;p&gt;The requested URL was not found on this server.&lt;/p&gt;
+&lt;hr&gt;
+&lt;address&gt;Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80&lt;/address&gt;
+&lt;/body&gt;&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-4">Hidden File Found</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost/Vulnerable-Web-Application/.git/config</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/538.html">CWE-538</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/05-Enumerate_Infrastructure_and_Application_Admin_Interfaces">WSTG-v42-CONF-05</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>A sensitive file was identified as accessible or available. This may leak administrative, configuration, or credential information which can be leveraged by a malicious individual to further attack the system or conduct social engineering efforts.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>git_dir</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (281 bytes)</summary>
+				
+				<pre><code>GET http://localhost/Vulnerable-Web-Application/.git/config HTTP/1.1
+host: localhost
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+referer: http://localhost/Vulnerable-Web-Application/
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (228 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Tue, 21 May 2024 23:35:07 GMT
+Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+Last-Modified: Mon, 13 May 2024 22:13:58 GMT
+ETag: "13e-6185d33b06692"
+Accept-Ranges: bytes
+Content-Length: 318
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (318 bytes)</summary>
+				
+				<pre><code>[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/OWASP/Vulnerable-Web-Application.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>HTTP/1.1 200 OK</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Consider whether or not the component is actually required in production, if it isn't then disable it. If it is then ensure access to it requires appropriate authentication and authorization, or limit exposure to internal systems or specific source IPs, etc.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-2">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">Médio</span>, <span>Confidence</span>=<span class="confidence-level">Médio</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost</span> <span>(2)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-3">Directory Browsing</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost/Vulnerable-Web-Application/Resources/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html">OWASP_2017_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/548.html">CWE-548</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>It is possible to view the directory listing.  Directory listing may reveal hidden scripts, include files, backup source files, etc. which can be accessed to read sensitive information.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (280 bytes)</summary>
+				
+				<pre><code>GET http://localhost/Vulnerable-Web-Application/Resources/ HTTP/1.1
+host: localhost
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+referer: http://localhost/Vulnerable-Web-Application/
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (173 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Tue, 21 May 2024 23:35:04 GMT
+Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+Content-Length: 1919
+Content-Type: text/html;charset=UTF-8
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1919 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Index of /Vulnerable-Web-Application/Resources&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+&lt;h1&gt;Index of /Vulnerable-Web-Application/Resources&lt;/h1&gt;
+  &lt;table&gt;
+   &lt;tr&gt;&lt;th valign="top"&gt;&lt;img src="/icons/blank.gif" alt="[ICO]"&gt;&lt;/th&gt;&lt;th&gt;&lt;a href="?C=N;O=D"&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href="?C=M;O=A"&gt;Last modified&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href="?C=S;O=A"&gt;Size&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href="?C=D;O=A"&gt;Description&lt;/a&gt;&lt;/th&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;th colspan="5"&gt;&lt;hr&gt;&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top"&gt;&lt;img src="/icons/back.gif" alt="[PARENTDIR]"&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="/Vulnerable-Web-Application/"&gt;Parent Directory&lt;/a&gt;       &lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td align="right"&gt;  - &lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top"&gt;&lt;img src="/icons/image2.gif" alt="[IMG]"&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="VulnWeb.png"&gt;VulnWeb.png&lt;/a&gt;            &lt;/td&gt;&lt;td align="right"&gt;2024-05-13 23:13  &lt;/td&gt;&lt;td align="right"&gt;122K&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top"&gt;&lt;img src="/icons/text.gif" alt="[TXT]"&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="button.css"&gt;button.css&lt;/a&gt;             &lt;/td&gt;&lt;td align="right"&gt;2024-05-13 23:13  &lt;/td&gt;&lt;td align="right"&gt;237 &lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top"&gt;&lt;img src="/icons/image2.gif" alt="[IMG]"&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="gazicyber.jpg"&gt;gazicyber.jpg&lt;/a&gt;          &lt;/td&gt;&lt;td align="right"&gt;2024-05-13 23:13  &lt;/td&gt;&lt;td align="right"&gt; 22K&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top"&gt;&lt;img src="/icons/image2.gif" alt="[IMG]"&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="hmb.png"&gt;hmb.png&lt;/a&gt;                &lt;/td&gt;&lt;td align="right"&gt;2024-05-13 23:13  &lt;/td&gt;&lt;td align="right"&gt;891K&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top"&gt;&lt;img src="/icons/image2.gif" alt="[IMG]"&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="hmbct.png"&gt;hmbct.png&lt;/a&gt;              &lt;/td&gt;&lt;td align="right"&gt;2024-05-13 23:13  &lt;/td&gt;&lt;td align="right"&gt; 95K&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;th colspan="5"&gt;&lt;hr&gt;&lt;/th&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;address&gt;Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80&lt;/address&gt;
+&lt;/body&gt;&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Attack</th>
+		<td><pre><code>http://localhost/Vulnerable-Web-Application/Resources/</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Parent Directory</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Disable directory browsing.  If this is required, make sure the listed files does not induce risks.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-5">Missing Anti-clickjacking Header</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost/Vulnerable-Web-Application/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">WSTG-v42-CLNT-09</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/1021.html">CWE-1021</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (215 bytes)</summary>
+				
+				<pre><code>GET http://localhost/Vulnerable-Web-Application/ HTTP/1.1
+host: localhost
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (200 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Tue, 21 May 2024 23:34:00 GMT
+Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+X-Powered-By: PHP/8.2.12
+Content-Length: 1269
+Content-Type: text/html; charset=UTF-8
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1269 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;SETUP&lt;/title&gt;
+&lt;link rel="shortcut icon" href="Resources/hmbct.png" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;link rel="stylesheet" href="Resources/button.css"&gt;
+  &lt;div class="button" align="center" style="background-color:#757575;padding:10px;border-radius:80px 80px 0px 0px"&gt;
+    &lt;button type="button" name="homepagebutton" onclick="location.href='homepage.html'"&gt;Home Page&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;/link&gt;
+  &lt;div align="center" style="background-color:#c9c9c9;padding:150px;"&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Create Database:&amp;ensp;&lt;/label&gt;
+      &lt;input type="submit" name="submit" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Restore Database:&lt;/label&gt;
+      &lt;input type="submit" name="submit1" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+  &lt;/div&gt;
+
+&lt;div align="center" style="background-color:#afafaf;padding:60px;border-radius:0px 0px 80px 80px"&gt;
+&lt;/div&gt;
+  &lt;img src="Resources/hmb.png" align="left" style="width:40%" alt="HummingbirdsCyberTeam"&gt;
+  &lt;img src="Resources/gazicyber.jpg" align="right" style="width:15%" alt="GaziCyber"&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-frame-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p>
+
+<p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's "frame-ancestors" directive.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-1">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">Médio</span>, <span>Confidence</span>=<span class="confidence-level">Baixo</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost</span> <span>(2)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-1">Absence of Anti-CSRF Tokens</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost/Vulnerable-Web-Application/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/05-Testing_for_Cross_Site_Request_Forgery">WSTG-v42-SESS-05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html">OWASP_2017_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/352.html">CWE-352</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>No Anti-CSRF tokens were found in a HTML submission form.</p>
+
+<p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p>
+
+<p>CSRF attacks are effective in a number of situations, including:</p>
+
+<p>    * The victim has an active session on the target site.</p>
+
+<p>    * The victim is authenticated via HTTP auth on the target site.</p>
+
+<p>    * The victim is on the same local network as the target site.</p>
+
+<p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: "submit" ].</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (215 bytes)</summary>
+				
+				<pre><code>GET http://localhost/Vulnerable-Web-Application/ HTTP/1.1
+host: localhost
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (200 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Tue, 21 May 2024 23:34:00 GMT
+Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+X-Powered-By: PHP/8.2.12
+Content-Length: 1269
+Content-Type: text/html; charset=UTF-8
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1269 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;SETUP&lt;/title&gt;
+&lt;link rel="shortcut icon" href="Resources/hmbct.png" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;link rel="stylesheet" href="Resources/button.css"&gt;
+  &lt;div class="button" align="center" style="background-color:#757575;padding:10px;border-radius:80px 80px 0px 0px"&gt;
+    &lt;button type="button" name="homepagebutton" onclick="location.href='homepage.html'"&gt;Home Page&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;/link&gt;
+  &lt;div align="center" style="background-color:#c9c9c9;padding:150px;"&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Create Database:&amp;ensp;&lt;/label&gt;
+      &lt;input type="submit" name="submit" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Restore Database:&lt;/label&gt;
+      &lt;input type="submit" name="submit1" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+  &lt;/div&gt;
+
+&lt;div align="center" style="background-color:#afafaf;padding:60px;border-radius:0px 0px 80px 80px"&gt;
+&lt;/div&gt;
+  &lt;img src="Resources/hmb.png" align="left" style="width:40%" alt="HummingbirdsCyberTeam"&gt;
+  &lt;img src="Resources/gazicyber.jpg" align="right" style="width:15%" alt="GaziCyber"&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>&lt;form method="POST"&gt;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Phase: Architecture and Design</p>
+
+<p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p>
+
+<p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p>
+
+<p>Phase: Implementation</p>
+
+<p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p>
+
+<p>Phase: Architecture and Design</p>
+
+<p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p>
+
+<p>Note that this can be bypassed using XSS.</p>
+
+<p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p>
+
+<p>Note that this can be bypassed using XSS.</p>
+
+<p>Use the ESAPI Session Management control.</p>
+
+<p>This control includes a component for CSRF.</p>
+
+<p>Do not use the GET method for any request that triggers a state change.</p>
+
+<p>Phase: Implementation</p>
+
+<p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-6">Parameter Tampering</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST http://localhost/Vulnerable-Web-Application/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A04_2021-Insecure_Design/">OWASP_2021_A04</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A1_2017-Injection.html">OWASP_2017_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/472.html">CWE-472</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Parameter manipulation caused an error page or Java stack trace to be displayed.  This indicated lack of exception handling and potential areas for further exploit.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (339 bytes)</summary>
+				
+				<pre><code>POST http://localhost/Vulnerable-Web-Application/ HTTP/1.1
+host: localhost
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+content-type: application/x-www-form-urlencoded
+referer: http://localhost/Vulnerable-Web-Application/
+content-length: 7
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (7 bytes)</summary>
+				
+				<pre><code>submit=</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (200 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Tue, 21 May 2024 23:35:06 GMT
+Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+X-Powered-By: PHP/8.2.12
+Content-Length: 1607
+Content-Type: text/html; charset=UTF-8
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1607 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;SETUP&lt;/title&gt;
+&lt;link rel="shortcut icon" href="Resources/hmbct.png" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;link rel="stylesheet" href="Resources/button.css"&gt;
+  &lt;div class="button" align="center" style="background-color:#757575;padding:10px;border-radius:80px 80px 0px 0px"&gt;
+    &lt;button type="button" name="homepagebutton" onclick="location.href='homepage.html'"&gt;Home Page&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;/link&gt;
+  &lt;div align="center" style="background-color:#c9c9c9;padding:150px;"&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Create Database:&amp;ensp;&lt;/label&gt;
+      &lt;input type="submit" name="submit" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Restore Database:&lt;/label&gt;
+      &lt;input type="submit" name="submit1" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+  &lt;/div&gt;
+
+&lt;div align="center" style="background-color:#afafaf;padding:60px;border-radius:0px 0px 80px 80px"&gt;
+Connected successfully  &lt;/br&gt;&lt;br /&gt;
+&lt;b&gt;Fatal error&lt;/b&gt;:  Uncaught mysqli_sql_exception: Can't create database '1ccb8097d0e9ce9f154608be60224c7c'; database exists in C:\xampp\htdocs\Vulnerable-Web-Application\index.php:66
+Stack trace:
+#0 C:\xampp\htdocs\Vulnerable-Web-Application\index.php(66): mysqli_query(Object(mysqli), 'CREATE Database...')
+#1 C:\xampp\htdocs\Vulnerable-Web-Application\index.php(39): create_database(Object(mysqli))
+#2 {main}
+  thrown in &lt;b&gt;C:\xampp\htdocs\Vulnerable-Web-Application\index.php&lt;/b&gt; on line &lt;b&gt;66&lt;/b&gt;&lt;br /&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>submit</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code> on line &lt;b&gt;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Identify the cause of the error and fix it.  Do not trust client side input and enforce a tight check in the server side.  Besides, catch the exception properly.  Use a generic 500 error page for internal server error.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+				 
+				
+				
+				<li id="alerts--risk-1-confidence-3">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">Baixo</span>, <span>Confidence</span>=<span class="confidence-level">Alto</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-8">Server Leaks Version Information via "Server" HTTP Response Header Field</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost/Vulnerable-Web-Application/Resources/button.css</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server">WSTG-v42-INFO-02</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/200.html">CWE-200</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The web/application server is leaking version information via the "Server" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (290 bytes)</summary>
+				
+				<pre><code>GET http://localhost/Vulnerable-Web-Application/Resources/button.css HTTP/1.1
+host: localhost
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+referer: http://localhost/Vulnerable-Web-Application/
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (251 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Tue, 21 May 2024 23:34:00 GMT
+Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+Last-Modified: Mon, 13 May 2024 22:13:58 GMT
+ETag: "ed-6185d33b0b637"
+Accept-Ranges: bytes
+Content-Length: 237
+Content-Type: text/css
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (237 bytes)</summary>
+				
+				<pre><code>.button button {
+  color: black;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 30%;
+  display: block;
+  border-radius: 10px;
+  text-align: center;
+  margin:0 auto;
+}
+.button button:hover {
+  background-color: #60a9d0;
+}
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-2">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">Baixo</span>, <span>Confidence</span>=<span class="confidence-level">Médio</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost</span> <span>(2)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-7">Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost/Vulnerable-Web-Application/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework">WSTG-v42-INFO-08</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/200.html">CWE-200</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The web/application server is leaking information via one or more "X-Powered-By" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (215 bytes)</summary>
+				
+				<pre><code>GET http://localhost/Vulnerable-Web-Application/ HTTP/1.1
+host: localhost
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (200 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Tue, 21 May 2024 23:34:00 GMT
+Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+X-Powered-By: PHP/8.2.12
+Content-Length: 1269
+Content-Type: text/html; charset=UTF-8
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1269 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;SETUP&lt;/title&gt;
+&lt;link rel="shortcut icon" href="Resources/hmbct.png" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;link rel="stylesheet" href="Resources/button.css"&gt;
+  &lt;div class="button" align="center" style="background-color:#757575;padding:10px;border-radius:80px 80px 0px 0px"&gt;
+    &lt;button type="button" name="homepagebutton" onclick="location.href='homepage.html'"&gt;Home Page&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;/link&gt;
+  &lt;div align="center" style="background-color:#c9c9c9;padding:150px;"&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Create Database:&amp;ensp;&lt;/label&gt;
+      &lt;input type="submit" name="submit" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Restore Database:&lt;/label&gt;
+      &lt;input type="submit" name="submit1" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+  &lt;/div&gt;
+
+&lt;div align="center" style="background-color:#afafaf;padding:60px;border-radius:0px 0px 80px 80px"&gt;
+&lt;/div&gt;
+  &lt;img src="Resources/hmb.png" align="left" style="width:40%" alt="HummingbirdsCyberTeam"&gt;
+  &lt;img src="Resources/gazicyber.jpg" align="right" style="width:15%" alt="GaziCyber"&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>X-Powered-By: PHP/8.2.12</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress "X-Powered-By" headers.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-9">X-Content-Type-Options Header Missing</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost/Vulnerable-Web-Application/Resources/button.css</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p>
+
+<p>At "High" threshold this scan rule will not alert on client or server error responses.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (290 bytes)</summary>
+				
+				<pre><code>GET http://localhost/Vulnerable-Web-Application/Resources/button.css HTTP/1.1
+host: localhost
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+referer: http://localhost/Vulnerable-Web-Application/
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (251 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Tue, 21 May 2024 23:34:00 GMT
+Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+Last-Modified: Mon, 13 May 2024 22:13:58 GMT
+ETag: "ed-6185d33b0b637"
+Accept-Ranges: bytes
+Content-Length: 237
+Content-Type: text/css
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (237 bytes)</summary>
+				
+				<pre><code>.button button {
+  color: black;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 30%;
+  display: block;
+  border-radius: 10px;
+  text-align: center;
+  margin:0 auto;
+}
+.button button:hover {
+  background-color: #60a9d0;
+}
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-content-type-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p>
+
+<p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				
+				
+				<li id="alerts--risk-0-confidence-2">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">Informational</span>, <span>Confidence</span>=<span class="confidence-level">Médio</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-10">User Agent Fuzzer</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost/Vulnerable-Web-Application</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (184 bytes)</summary>
+				
+				<pre><code>GET http://localhost/Vulnerable-Web-Application HTTP/1.1
+host: localhost
+user-agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (200 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Tue, 21 May 2024 23:35:08 GMT
+Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+X-Powered-By: PHP/8.2.12
+Content-Length: 1269
+Content-Type: text/html; charset=UTF-8
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1269 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;SETUP&lt;/title&gt;
+&lt;link rel="shortcut icon" href="Resources/hmbct.png" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;link rel="stylesheet" href="Resources/button.css"&gt;
+  &lt;div class="button" align="center" style="background-color:#757575;padding:10px;border-radius:80px 80px 0px 0px"&gt;
+    &lt;button type="button" name="homepagebutton" onclick="location.href='homepage.html'"&gt;Home Page&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;/link&gt;
+  &lt;div align="center" style="background-color:#c9c9c9;padding:150px;"&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Create Database:&amp;ensp;&lt;/label&gt;
+      &lt;input type="submit" name="submit" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Restore Database:&lt;/label&gt;
+      &lt;input type="submit" name="submit1" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+  &lt;/div&gt;
+
+&lt;div align="center" style="background-color:#afafaf;padding:60px;border-radius:0px 0px 80px 80px"&gt;
+&lt;/div&gt;
+  &lt;img src="Resources/hmb.png" align="left" style="width:40%" alt="HummingbirdsCyberTeam"&gt;
+  &lt;img src="Resources/gazicyber.jpg" align="right" style="width:15%" alt="GaziCyber"&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>Header User-Agent</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Attack</th>
+		<td><pre><code>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</code></pre></td>
+	</tr>
+	
+	
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-1">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">Informational</span>, <span>Confidence</span>=<span class="confidence-level">Baixo</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/aluis/Desktop/2024-05-22-ZAP-Report-.html#alert-type-11">User Controllable HTML Element Attribute (Potential XSS)</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST http://localhost/Vulnerable-Web-Application/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A1_2017-Injection.html">OWASP_2017_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A03_2021-Injection/">OWASP_2021_A03</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p>
+
+<p>http://localhost/Vulnerable-Web-Application/</p>
+
+<p>appears to include user input in: </p>
+
+<p>a(n) [input] tag [value] attribute </p>
+
+<p>The user input found was:</p>
+
+<p>submit1=Enter</p>
+
+<p>The user-controlled value was:</p>
+
+<p>enter</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (340 bytes)</summary>
+				
+				<pre><code>POST http://localhost/Vulnerable-Web-Application/ HTTP/1.1
+host: localhost
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+content-type: application/x-www-form-urlencoded
+referer: http://localhost/Vulnerable-Web-Application/
+content-length: 13
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (13 bytes)</summary>
+				
+				<pre><code>submit1=Enter</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (200 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Tue, 21 May 2024 23:34:00 GMT
+Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+X-Powered-By: PHP/8.2.12
+Content-Length: 2077
+Content-Type: text/html; charset=UTF-8
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (2077 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;SETUP&lt;/title&gt;
+&lt;link rel="shortcut icon" href="Resources/hmbct.png" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;link rel="stylesheet" href="Resources/button.css"&gt;
+  &lt;div class="button" align="center" style="background-color:#757575;padding:10px;border-radius:80px 80px 0px 0px"&gt;
+    &lt;button type="button" name="homepagebutton" onclick="location.href='homepage.html'"&gt;Home Page&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;/link&gt;
+  &lt;div align="center" style="background-color:#c9c9c9;padding:150px;"&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Create Database:&amp;ensp;&lt;/label&gt;
+      &lt;input type="submit" name="submit" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+
+    &lt;form method="POST"&gt;
+      &lt;label style="font-size:24px;font-family:'Georgia'"&gt;Restore Database:&lt;/label&gt;
+      &lt;input type="submit" name="submit1" value="Enter" style="padding:8px;font-family:'Georgia'"&gt;&lt;/form&gt;
+  &lt;/div&gt;
+
+&lt;div align="center" style="background-color:#afafaf;padding:60px;border-radius:0px 0px 80px 80px"&gt;
+Connected successfully &lt;br&gt;&lt;br&gt;The database deleted successfully.&lt;br&gt;Database 1ccb8097d0e9ce9f154608be60224c7c created successfully &lt;/br&gt;Table books created successfully &lt;/br&gt;Table flags created successfully &lt;/br&gt;Table secret created successfully &lt;/br&gt;Table users created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;New record created successfully &lt;/br&gt;&lt;/div&gt;
+  &lt;img src="Resources/hmb.png" align="left" style="width:40%" alt="HummingbirdsCyberTeam"&gt;
+  &lt;img src="Resources/gazicyber.jpg" align="right" style="width:15%" alt="GaziCyber"&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>submit1</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2>Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3>Alert types</h3>
+				<p class="alert-types-intro">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li id="alert-type-0">
+						<h4>SQL Injection</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/40018/">SQL Injection</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/89.html">89</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>19</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-1">
+						<h4>Absence of Anti-CSRF Tokens</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10202/">Absence of Anti-CSRF Tokens</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>9</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html</a></li>
+										<li><a href="https://cwe.mitre.org/data/definitions/352.html">https://cwe.mitre.org/data/definitions/352.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-2">
+						<h4>Content Security Policy (CSP) Header Not Set</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10038/">Content Security Policy (CSP) Header Not Set</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a></li>
+										<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a></li>
+										<li><a href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a href="https://w3c.github.io/webappsec-csp/">https://w3c.github.io/webappsec-csp/</a></li>
+										<li><a href="https://web.dev/articles/csp">https://web.dev/articles/csp</a></li>
+										<li><a href="https://caniuse.com/#feat=contentsecuritypolicy">https://caniuse.com/#feat=contentsecuritypolicy</a></li>
+										<li><a href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-3">
+						<h4>Directory Browsing</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/0/">Directory Browsing</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/548.html">548</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>48</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://httpd.apache.org/docs/mod/core.html#options">https://httpd.apache.org/docs/mod/core.html#options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-4">
+						<h4>Hidden File Found</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/40035/">Hidden File Finder</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/538.html">538</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://blog.hboeck.de/archives/892-Introducing-Snallygaster-a-Tool-to-Scan-for-Secrets-on-Web-Servers.html">https://blog.hboeck.de/archives/892-Introducing-Snallygaster-a-Tool-to-Scan-for-Secrets-on-Web-Servers.html</a></li>
+										<li><a href="https://git-scm.com/docs/git-config">https://git-scm.com/docs/git-config</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-5">
+						<h4>Missing Anti-clickjacking Header</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10020/">Anti-clickjacking Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/1021.html">1021</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-6">
+						<h4>Parameter Tampering</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/40008/">Parameter Tampering</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/472.html">472</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>20</td>
+							</tr>
+							
+						</tbody></table>
+					</li>
+					<li id="alert-type-7">
+						<h4>Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10037/">Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework">https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework</a></li>
+										<li><a href="https://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html">https://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-8">
+						<h4>Server Leaks Version Information via "Server" HTTP Response Header Field</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10036/">HTTP Server Response Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://httpd.apache.org/docs/current/mod/core.html#servertokens">https://httpd.apache.org/docs/current/mod/core.html#servertokens</a></li>
+										<li><a href="https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)">https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)</a></li>
+										<li><a href="https://www.troyhunt.com/shhh-dont-let-your-response-headers/">https://www.troyhunt.com/shhh-dont-let-your-response-headers/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-9">
+						<h4>X-Content-Type-Options Header Missing</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10021/">X-Content-Type-Options Header Missing</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)">https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)</a></li>
+										<li><a href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-10">
+						<h4>User Agent Fuzzer</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10104/">User Agent Fuzzer</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://owasp.org/wstg">https://owasp.org/wstg</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-11">
+						<h4>User Controllable HTML Element Attribute (Potential XSS)</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10031/">User Controllable HTML Element Attribute (Potential XSS)</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/20.html">20</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>20</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+
+
+
+
+
+</body></html>

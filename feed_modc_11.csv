@@ -1,0 +1,34 @@
+APP,Vulnerability,Risk Level,File,Line,Input/Description,Tool,CVE/CWE
+i2,XSS (DOM),High,vuln_wa/XSS/XSS_level1.php,Line 22,"username: jaVasCript:/*-/*`/*\`/*'/*""/**/(/* */oNcliCk=alert(5397) )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert(5397)//>\x3e",OWASP ZAP,CWE-79: Improper Neutralization of Input During Web Page Generation
+i2,XSS (Reflected),High,vuln_wa/FileInclusion/pages/lvl1.php,Line 26,URL: https://localhost/vuln_wa/FileInclusion/pages/lvl1.php?file=1.php?%3C/h5%3E%3CscrIpt%3Ealert(1);%3C/scRipt%3E%3Ch5%3E,OWASP ZAP,CWE-79: Improper Neutralization of Input During Web Page Generation
+i2,XSS (Reflected),High,vuln_wa/FileInclusion/pages/lvl2.php,Line 33,URL: http://localhost/vuln_wa/FileInclusion/pages/lvl2.php?file=%3C%2Fh5%3E%3CscrIpt%3Ealert%281%29%3B%3C%2FscRipt%3E%3Ch5%3E,OWASP ZAP,CWE-79: Improper Neutralization of Input During Web Page Generation
+i2,XSS (Reflected),High,vuln_wa/XSS/XSS_level1.php,Line 22,username: <scrIpt>alert(1);</scRipt>,OWASP ZAP,CWE-79: Improper Neutralization of Input During Web Page Generation
+i2,XSS (Reflected),High,vuln_wa/XSS/XSS_level3.php,Line 22,username: <img src=x onerror=prompt()>,OWASP ZAP,CWE-79: Improper Neutralization of Input During Web Page Generation
+i2,Path Transversal,High,vuln_wa/FileInclusion/pages/lvl1.php,URL,https://localhost/vuln_wa/FileInclusion/pages/lvl1.php?file=/opt/lampp/etc/extra/httpd-xampp.conf,OWASP ZAP,CWE-22: Improper Limitation of a Pathname to a Restricted Directory
+i2,Path Transversal,High,vuln_wa/FileInclusion/pages/lvl2.php,URL,https://localhost/vuln_wa/FileInclusion/pages/lvl2.php?file=/opt/lampp/etc/extra/httpd-xampp.conf,OWASP ZAP,CWE-22: Improper Limitation of a Pathname to a Restricted Directory
+i2,Remote Comand Execution,High,vuln_wa/CommandExecution/CommandExec-1.php,Line 25,typeBox(Username): cat comex1/log1.txt,OWASP ZAP,CWE-78: Improper Neutralization of Special Elements used in an OS Command
+i2,Remote Comand Execution,High,vuln_wa/CommandExecution/CommandExec-2.php,Line 25,typeBox(Name): cat CommandExec-2.php; Solution= typeBox(Name): Trochilidae,OWASP ZAP,CWE-78: Improper Neutralization of Special Elements used in an OS Command
+i2,Remote Comand Execution,High,vuln_wa/CommandExecution/CommandExec-3.php,Line 39,typeBox(Name): ls,OWASP ZAP,CWE-78: Improper Neutralization of Special Elements used in an OS Command
+i2,Remote Comand Execution,High,vuln_wa/CommandExecution/CommandExec-4.php,Line 44,typeBox(Name): cat /etc/passwd,OWASP ZAP,CWE-78: Improper Neutralization of Special Elements used in an OS Command
+i2,SQL Injection,High,vuln_wa/SQL/sql1.php,Line 39,firstname: 1' OR '1'='1,"OWASP ZAP, sqlmap",CWE-89: Improper Neutralization of Special Elements used in an SQL Command
+i2,SQL Injection,High,vuln_wa/SQL/sql2.php,Line 37,"number: """" or 1=1; --","OWASP ZAP, sqlmap",CWE-89: Improper Neutralization of Special Elements used in an SQL Command
+i2,SQL Injection,High,vuln_wa/SQL/sql3.php,Line 38,number: ' OR '1'='1,"OWASP ZAP, sqlmap",CWE-89: Improper Neutralization of Special Elements used in an SQL Command
+i2,SQL Injection,High,vuln_wa/SQL/sql4.php,Line 42,number: 23 or 1=1; --,"OWASP ZAP, sqlmap",CWE-89: Improper Neutralization of Special Elements used in an SQL Command
+i2,SQL Injection,High,vuln_wa/SQL/sql5.php,Line 50,Erro no código sql5.php,"OWASP ZAP, sqlmap",CWE-89: Improper Neutralization of Special Elements used in an SQL Command
+i2,SQL Injection,High,vuln_wa/SQL/sql6.php,Line 35,number: ' OR '1'='1' -- ,"OWASP ZAP, sqlmap",CWE-89: Improper Neutralization of Special Elements used in an SQL Command
+i2,File Upload,Medium,vuln_wa/FileUpload/fileupload1.php,Line 27,URL: http://localhost/vuln_wa/FileUpload/uploads/malicious.php?cmd=ls (Depois do ficheiro malicious.php ser submetido),Static Analysis,CWE-434: Unrestricted Upload of File with Dangerous Type
+nsj11,Uncrypted Files,High,Directory PyconChat,-,cat usernames.txt,Static Analysis,CWE-311: Missing Encryption of Sensitive Data; CWE-313: Cleartext Storage in a File or on Disk;
+nsj11,Brute Force,Medium,client.py,Line 189,Tentar diversas combinações de name:password até encontrar alguma correta.,Static Analysis,CWE-307: Improper Restriction of Excessive Authentication Attempts
+nsj11,Path Transversal,High,server.py,-,file transfer: ../filename.txt,Wireshark,CWE-23: Relative Path Traversal
+nsj11,Uncrypted Messages,High,server.py,-,Registo/Login e Admin visível no sniffer: name:password e name:admin ,Wireshark,CWE-319: Cleartext Transmission of Sensitive Information
+nsj11,Denial of Service,High,client.py,Line 183 -184,Aceita conexões de qualquer cliente sem ratelimit ou verificação de IP.,Wireshark; Static Analysis,CWE-400: Uncontrolled Resource Consumption
+jsw12,Denial of Service,High,P2Pserver.java,Line 25,Aceita conexões de qualquer cliente sem ratelimit ou verificação de IP.,Wireshark; Static Analysis,CWE-400: Uncontrolled Resource Consumption
+jsw12,Deserialization of Untrusted Data,Medium,P2Pserver.java,Line 63,Inputs não sanitizados de fontes remotas,Snyk,CWE-502: Deserialization of Untrusted Data
+jsw12,Cleartext Storage of Sensitive Information,High,P2Pclient.java,Line 118,As chaves privadas e públicas são armazenadas em ficheiros locais,Static Analysis,CWE-312 - Cleartext Storage of Sensitive Information
+jsw12,Improper Input Validation,High,P2Pclient.java,Line 182,Não há validação adequada do input,Static Analysis,CWE-20 - Improper Input Validation
+jsw12,Deserialization of Untrusted Data,Medium,P2Pclient.java,Line 44,Inputs não sanitizados de fontes remotas,Snyk,CWE-502: Deserialization of Untrusted Data
+jsw12,Cleartext Transmission of Sensitive Information,High,P2Pclient.java,Line 209,Escrita em um socket não cifrado,Snyk,CWE-319: Cleartext Transmission of Sensitive Information
+jsw12,Uncrypted Data,High,P2Pclient.java,Line 160,"cat registered_users.csv / Registo do login do cliente em csv (public_key, cliente ip and port, client username)",Static Analysis,CWE-311: Missing Encryption of Sensitive Data; CWE-313: Cleartext Storage in a File or on Disk;
+jsw12,Cleartext Transmission of Sensitive Information,High,P2Pclient.java,Line 170,Fuga de dados do utilizador via network broadcast.,Wireshark; Static Analysis,CWE-319: Cleartext Transmission of Sensitive Information
+jsw12,Improper Input Validation,High,P2Pclient.java,Line 48,"username: 1,2,3,4,5,6",Static Analysis,CWE-20 - Improper Input Validation
+jsw12,Use of a Broken or Risky Cryptographic Algorithm,High,P2Pclient.java,Line 218,"Utilização de RSA com padding PKCS#1 v1.5, que poderá vulneravel a ataques de padding oracle",Static Analysis,CWE-327 - Use of a Broken or Risky Cryptographic Algorithm

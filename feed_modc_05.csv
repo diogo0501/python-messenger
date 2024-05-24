@@ -1,0 +1,30 @@
+﻿external_app_name,internal_app_name,vulnerability,cwe_code,file,line,trigger_input,description
+jsw12,pt1,Deserialization of Untrusted Data,CWE-502,Client/Client/P2PClient.java,136,Malicious Java Object,UserData class is deserialized from network without checking integrity. Malicious code can be inputed.
+jsw12,pt1,Deserialization of Untrusted Data,CWE-502,Server/Server/P2PServer.java,63,Malicious Java Object,UserData class is deserialized from network without checking integrity. Malicious code can be inputed.
+jsw12,pt1,Deserialization of Untrusted Data,CWE-502,Server/Server/P2PServer.java,70,Malicious Java Object,UserData class is deserialized from network without checking integrity. Malicious code can be inputed.
+jsw12,pt1,Cleartext Transmission of Sensitive Information,CWE-319,Server/Server/P2PServer.java,18,,"Connection is not encrypted or secured, unauthorised parties can read/change messages with ease."
+jsw12,pt1,Uncontrolled Resource Consumption,CWE-400,Server/Server/P2PServer.java,26,,"No limit to number of connection threads. A lot can be created, drying the server of resources."
+jsw12,pt1,Improper Neutralization of Formula Elements in a CSV File,CWE-1236,Client/Client/P2PClient.java,259,""" =1+2"";=1+2 ""","This username (without first and last "") will create a new cell in the csv file if opened in Excel. The new cell could contain a malicious formula."
+Vulnerable-Web-Application,i2,Improper Neutralization of Special Elements used in a Command,CWE-77,CommandExecution/CommandExec-1.php,25,echo 'aaaa',Unsanitized input directly to exec function (username)
+Vulnerable-Web-Application,i2,Improper Neutralization of Special Elements used in a Command,CWE-77,CommandExecution/CommandExec-2.php,25,echo 'aaaa',Poorly sanitized input to exec function (typeBox)
+Vulnerable-Web-Application,i2,Improper Neutralization of Special Elements used in a Command,CWE-77,CommandExecution/CommandExec-3.php,39,echo 'aaaa',Poorly sanitized input to exec function (typeBox)
+Vulnerable-Web-Application,i2,Improper Neutralization of Special Elements used in a Command,CWE-77,CommandExecution/CommandExec-4.php,44,echo 'aaaa',Poorly sanitized input to exec function (typeBox)
+Vulnerable-Web-Application,i2,Improper Neutralization of Special Elements used in an SQL Command,CWE-89,SQL/sql1.php,40, OR '1'='1,Unsanitized input directly to SQL Query (firstname)
+Vulnerable-Web-Application,i2,Improper Neutralization of Special Elements used in an SQL Command,CWE-89,SQL/sql2.php,38,1 OR '1'='1',Unsanitized input directly to SQL Query (number)
+Vulnerable-Web-Application,i2,Improper Neutralization of Special Elements used in an SQL Command,CWE-89,SQL/sql3.php,39, OR '1'='1,Unsanitized input directly to SQL Query (number)
+Vulnerable-Web-Application,i2,Improper Neutralization of Special Elements used in an SQL Command,CWE-89,SQL/sql4.php,52,1 OR 1=1,Poorly sanitized input directly to SQL Query (number)
+Vulnerable-Web-Application,i2,Improper Neutralization of Special Elements used in an SQL Command,CWE-89,SQL/sql6.php,36, OR '1'='1,Unsanitized input directly to SQL Query (number)
+Vulnerable-Web-Application,i2,Improper Neutralization of Input During Web Page Generation,CWE-79,XSS/XSS_level1.php,22,<script>alert('Hii!')</script>,Unsanitized input directly appended to HTML (username)
+Vulnerable-Web-Application,i2,Improper Neutralization of Input During Web Page Generation,CWE-79,XSS/XSS_level2.php,22,"<p><a href="""" onclick=""alert('Hii');"">Click me</a></p>",Poorly sanitized input directly appended to HTML (username)
+Vulnerable-Web-Application,i2,Improper Neutralization of Input During Web Page Generation,CWE-79,XSS/XSS_level3.php,22,"<p><a href="""" onclick=""alert('Hii');"">Click me</a></p>",Poorly sanitized input directly appended to HTML (username)
+Vulnerable-Web-Application,i2,Improper Neutralization of Input During Web Page Generation,CWE-79,XSS/XSS_level4.php,24,"<p><a href="""" onclick=""alert('Hii');"">Click me</a></p>",Poorly sanitized input directly appended to HTML (username)
+Vulnerable-Web-Application,i2,Improper Limitation of a Pathname to a Restricted Directory,CWE-22,FileInclusion/pages/lvl1.php,25,../hint2/hint2.php,Filepath constructed without proper sanitization of appended input (file)
+Vulnerable-Web-Application,i2,Improper Neutralization of Input During Web Page Generation,CWE-79,FileInclusion/pages/lvl1.php,26,<script>alert('Hii!')</script>,Unsanitized input directly appended to HTML (file)
+Vulnerable-Web-Application,i2,Improper Neutralization of Input During Web Page Generation,CWE-79,FileInclusion/pages/lvl2.php,33,<script>alert('Hii!')</script>,Unsanitized input directly appended to HTML (file)
+jvx11,pt2,Unencrypted server socket,CWE-319,Server/MainServer.java,18,,Connection is not encrypted or secured. Unauthorised parties can read/change messages with ease.
+jvx11,pt2,Unencrypted server socket,CWE-319,Client/org/Client/Main.java,39,,Connection is not encrypted or secured. Unauthorised parties can read/change messages with ease.
+jvx11,pt2,Improper Neutralization of Special Elements used in an SQL Command,CWE-89,Server/User.java,62,1' AND Name = '2,Will SQL error as server will try to create user with name that is already present in other user.
+jvx11,pt2,Improper Neutralization of Special Elements used in an SQL Command,CWE-89,Server/User.java,66,1' AND Name = '2,Will SQL error as server will try to create user with name that is already present in other user.
+jvx11,pt2,Improper Neutralization of Special Elements used in an SQL Command,CWE-89,Server/User.java,78,username'-- ,"Autentification can be easly bypassed by adding ""'-- "" after a username, no password required."
+jvx11,pt2,Improper Neutralization of Special Elements used in an SQL Command,CWE-89,Server/User.java,159,',"Simply making this query fail will make the server crash. A "" ' "" is all that is needed for this."
+jvx11,pt2,Improper Neutralization of Special Elements used in an SQL Command,CWE-89,Server/User.java,170,,Injection is technically possible if present in the username.

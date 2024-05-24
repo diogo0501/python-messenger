@@ -1,0 +1,21 @@
+﻿App,Vuln,Tool,CWE_id,Input,File,LineN,Note
+abp00,SQL Injection,Manual Static Analysis/Bandit,89,"Jorge1','123'); DROP TABLE users; --",ServerGUI.py,92,"Campo User na GUI, e de seguida carregar em Sign Up."
+abp00,Eval Injection,Manual Static Analysis/Bandit,95/78,"),print(""QualquerComandoAqui"")#",ClientGUI.py,282,"Podemos correr qualquer comando nas mensagens graças à função perigosa eval, por exemplo:  '),print(__import__('subprocess').getoutput('dir'))#"
+abp00,Broken Authentication,Manual Static Analysis,256,,database.db,,"A password é guardada em claro. Um atacante com acesso à DB obtém todos os usernames, passwords e mensagens trocadas."
+abp00,Vulnerable Components,Bandit,703,,ClientGUI.py/ServerGUI.py,236/313/341,
+abp00,Unencrypted Communication,Wireshark,319,,ClientGUI.py,,"A mensagem enviada pelo cliente não é cifrada, e, portanto, susceptível a Eavesdropper. No Wireshark, a mensagem aparece no payload em hexadecimal."
+njs11,Unencrypted Communication,Wireshark,319,,client.py,,"A mensagem enviada pelo cliente não é cifrada, e, portanto, susceptível a Eavesdropper. No Wireshark, a mensagem aparece no payload em hexadecimal."
+njs11,Path Traversal,Manual Static Analysis,23,../../../../etc/passwd,client.py,99,Com o /9 é possível aceder a ficheiros fora do diretório da aplicação.
+njs11,Broken Authentication,Manual Static Analysis,313,,usernames.txt,,"A password é guardada em claro. Um atacante com acesso ao ficheiro obtém todos os usernames, passwords."
+njs11,Vulnerable Components,Bandit,502,,client.py,3/16/47/53,
+njs11,Arbitrary File Deletion,Manual Static Analysis,73,server.py,server.py,158,"Ao enviar um ficheiro com o mesmo path e nome que um ficheiro existente no servidor, este último é removido."
+i2,SQL Injection,WAP/ZAP,89, or 1=1#,SQL/sql1.php,40,
+i2,SQL Injection,WAP/ZAP,89,1 or 1=1,SQL/sql2.php,38,
+i2,SQL Injection,WAP/ZAP,89,1' or '1'='1,SQL/sql3.php,39,
+i2,SQL Injection,WAP/ZAP,89,1 or 1=1,SQL/sql4.php,52,
+i2,SQL Injection,WAP/ZAP/sqlmap,89,,SQL/sql5.php,50,"Parâmetro ""number"" é injetável, logo é possível obter todos os dados da DB, assim como manipular/eliminar."
+i2,SQL Injection,WAP/ZAP/sqlmap,89,,SQL/sql6.php,36,"Parâmetro ""number"" é injetável, logo é possível obter todos os dados da DB, assim como manipular/eliminar."
+i2,XSS,WAP,79,,FileUpload/fileupload1.php,28,
+i2,XSS,WAP,79,,FileUpload/fileupload2.php,36,
+i2,XSS,WAP,79,,FileUpload/fileupload3.php,39,
+i2,OS Command Injection,WAP,78,,CommandExecution/CommandExec-1.php,25,

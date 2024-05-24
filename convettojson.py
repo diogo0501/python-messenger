@@ -1,46 +1,64 @@
-import pandas as pd
-import json
-from datetime import datetime
+import csv
+from pymisp import MISPObject, PyMISP, MISPEvent, MISPAttribute
 
-def process_csv_to_misp_json(csv_file, json_file):
-    df = pd.read_csv(csv_file, sep=None, engine='python')  
-    misp_event = {
-        "Event": {
-            "info": "Imported vulnerability data",
-            "date": datetime.now().strftime('%Y-%m-%d'),
-            "threat_level_id": "3",
-            "analysis": "0", 
-            "Attribute": []
-        }
+def main(csv_file_path, misp_url, misp_key, misp_verifycert):
+    misp = PyMISP(misp_url, misp_key, misp_verifycert)
+    
+    with open(csv_file_path, 'r', newline='', encoding='utf-8') as file:
+        sample = file.read(1024)
+        file.seek(0)
+        delimiter = detect_delimiter(sample)
+        
+        reader = csv.DictReader(file, delimiter=delimiter)
+        next(reader, None)  # Skip the header if it's present
+        for row in reader:
+            create_event(row, misp)
+
+def detect_delimiter(sample):
+    possible_delimiters = ['|', ';', ',']
+    delimiter_counts = {delimiter: sample.count(delimiter) for delimiter in possible_delimiters}
+    return max(delimiter_counts, key=delimiter_counts.get)
+
+
+def create_event(attribute_data, misp_instance):
+    event = MISPEvent()
+    application = attribute_data.get('Id') or attribute_data.get('APP')  or attribute_data.get('\ufeffexternal_app_nam') or attribute_data.get('\ufeffApp') or attribute_data.get('Feed') or attribute_data.get('app') or 'Unknown Application'
+    print(attribute_data)
+    event.info = f"Vulnerability Report: {application}"
+    event.distribution = 0
+    risk = attribute_data.get('severity') or attribute_data.get('Risk Level') or 'Undefined'
+    event.threat_level_id = map_severity_to_threat_level(risk)
+    event.analysis = 0
+
+    av_signature_object = MISPObject("av-signature")
+
+    for key, value in attribute_data.items():
+        if key is None:
+            av_signature_object.add_attribute('none', value=value, type='text')
+        elif key.lower() in ['url', 'link']:
+            av_signature_object.add_attribute('url', value=value, type='url')
+        elif key.lower() in ['ip', 'ip_address']:
+            av_signature_object.add_attribute('ip', value=value, type='ip_address')
+        else:
+            av_signature_object.add_attribute(key, value=value, type='text')
+
+    event.add_object(av_signature_object) 
+    misp_instance.add_event(event)
+
+def map_severity_to_threat_level(severity):
+    mapping = {
+        'Critical': 1,  
+        'High': 1,
+        'Medium': 2,
+        'Low': 3,
+        'Informational': 4,  
+        'Undefined': 4
     }
+    return mapping.get(severity, 4) 
 
-    for _, row in df.iterrows():
-        if 'Vulnerability' in df.columns:
-            attribute = {
-                "type": "vulnerability",
-                "category": "External analysis",
-                "to_ids": False,
-                "value": row.get('Vulnerability', ''),
-                "comment": f"CWE: {row.get('CWE', '')}, Severity: {row.get('Severity', '')}"
-            }
-            misp_event["Event"]["Attribute"].append(attribute)
-
-        if 'URL' in df.columns and row.get('URL', ''):
-            misp_event["Event"]["Attribute"].append({
-                "type": "url",
-                "category": "External analysis",
-                "value": row['URL'],
-                "to_ids": False
-            })
-
-        # Add more conditions based on other columns
-
-    # Save the structured event to a JSON file
-    with open(json_file, 'w') as f:
-        json.dump(misp_event, f, indent=4)
-
-# Example usage for multiple files
-file_paths = ["path_to_file1.csv", "path_to_file2.csv", ...]  # List all your file paths
-for file_path in file_paths:
-    json_path = file_path.replace('.csv', '.json')
-    process_csv_to_misp_json(file_path, json_path)
+if __name__ == '__main__':
+    csv_file_path = './feed_modc_13.csv'
+    misp_url = 'https://localhost:8443'
+    misp_key = '5JHP0V1zEzA8caqJ6TOgNgjvSSh6d8nGdbraaDDf'
+    misp_verifycert = False
+    main(csv_file_path, misp_url, misp_key, misp_verifycert)

@@ -1,0 +1,13 @@
+﻿ID;Severity;Attacked Program;Attack Vector;File;Line;Description;Found Date;Attack Complexity;Vulnerability Type;Tool Used
+1;Critical;ie2;SQL Injection;/home/ss/Desktop/vuln_wa/SQL/sql1.php;56;Input not sanitized;09/05/2024;Medium;Arbitrary Code Injection;WAP
+2;Critical;ie2;SQL Injection;/home/ss/Desktop/vuln_wa/SQL/sql6.php;36;Input not sanitized;09/05/2024;Medium;Arbitrary Code Injection;WAP
+3;Critical;ie2;Root Access;/home/ubuntu/Vulnerable-Web-Application/index.php;30;Hard-coded credential;09/05/2024;Easy;Hard-coded credential;Horusec
+4;Critical;ie2;XSS;/home/ubuntu/Vulnerable-Web-Application/XSS/XSS_level1.php;22;Input not sanitized;09/05/2024;Medium;Arbitrary Code Injection;Horusec
+5;High;xvj11;Missing Encryption;chatP2P.java;53, 94, 310;"Use of hardcoded credentials (User: ""debug"", Pass: ""debug"")";09/05/2024;High;Bad code implementation;snyk
+6;Low;xvj11;Unsanitized user input;chatP2P.java;430;Path traversal with user input;09/05/2024;Medium;Arbitrary Code Injection;snyk
+7;High;xvj11;Missing Encryption;chatP2P.java;71;"Use of hardcoded credentials (User: ""admin"", Pass: ""1234"")";10/05/2024;High;Bad code implementation;Horusec
+8;High;xvj11;Information exposure through error message;chatP2P.java;41;Exposure of database information through errors;10/05/2024;Low;Information exposure;Horusec
+9;Critical;xvj11;SQL Injection;chatP2P.java;59, 61;Input not sanitized;10/05/2024;Medium;Arbitrary Code Injection;Horusec
+10;Critical;xvj12;Network;app.js;64;Input not sanitized (SQL Injection);09/05/2024;Low;Arbitrary Code Injection;snyk
+11;Medium;xvj12;Network;-;-;Resource exhaustion (Availability);10/05/2024;Low;Uncontrolled Resource Consumption;snyk
+12;Critical;xvj12;Network;-;-;Input not sanitized (XSS);09/05/2024;Low;Arbitrary Code Injection;ZAP

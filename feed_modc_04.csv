@@ -1,0 +1,27 @@
+App,Vulnerability,Exploit,File,Line of Code,Tool,CWE,Programming Language
+RiskyPassVault,SQLInjection,!addlogin:u:p:w'); UPDATE admin SET password='jafoste' WHERE username='admin'; --,server.py,44,bandit,CWE-89,Python
+RiskyPassVault,SQLInjection,!getlogin:A') or '1'='1' --,server.py,55,bandit,CWE-89,Python
+RiskyPassVault,OS Command Injection,!admin admin admin exec ls,server.py,78,bandit,CWE-78,Python
+Vulnerable-Web-Application,SQLInjection,' OR '1'='1,SQL/sql1.php,40,"WAP; SQLMap",CWE-89,PHP
+Vulnerable-Web-Application,SQLInjection,12 OR '1'='1',SQL/sql2.php,38,"WAP; SQLMap",CWE-89,PHP
+Vulnerable-Web-Application,SQLInjection,' OR '1'='1,SQL/sql3.php,39,"WAP; SQLMap",CWE-89,PHP
+Vulnerable-Web-Application,SQLInjection,1 OR 3476=3476,SQL/sql4.php,52,"WAP; SQLMap",CWE-89,PHP
+Vulnerable-Web-Application,Remote File Inclusion,Creation and upload of a image file named �><img src=x onerror=alert(document.domain)>.jpg,FileUpload/fileupload1.php,28,WAP,CWE-98,PHP
+Vulnerable-Web-Application,OS Command Injection,ls,CommandExecution/CommandExec-1.php,25,WAP,CWE-78,PHP
+Vulnerable-Web-Application,Remote File Inclusion,Creation and upload of a image file named �><img src=x onerror=alert(document.domain)>.jpg,FileUpload/fileupload2.php,28,WAP,CWE-98,PHP
+Vulnerable-Web-Application,Remote File Inclusion,Creation and upload of a PNG image file named �><img src=x onerror=alert(document.domain)>.png,FileUpload/fileupload3.php,39,WAP,CWE-98,PHP
+Vulnerable-Web-Application,OS Command Injection,ls,CommandExecution/CommandExec-2.php,25,WAP,CWE-78,PHP
+Vulnerable-Web-Application,OS Command Injection,ls,CommandExecution/CommandExec-3.php,39,Manual,CWE-78,PHP
+Vulnerable-Web-Application,OS Command Injection,ls,CommandExecution/CommandExec-4.php,44,WAP,CWE-78,PHP
+Vulnerable-Web-Application,XSS,<script>alert(document.domain)</script>,/XSS/XSS_level1.php,22,WAP,CWE-79,PHP
+Vulnerable-Web-Application,XSS,<img src=x onerror=alert(document.domain)>,/XSS/XSS_level2.php,22,WAP,CWE-79,PHP
+Vulnerable-Web-Application,XSS,<img src=x onerror=alert(document.domain)>,/XSS/XSS_level3.php,22,WAP,CWE-79,PHP
+Vulnerable-Web-Application,XSS,<img src=x onerror=alert(document.domain)>,/XSS/XSS_level4.php,24,WAP,CWE-79,PHP
+Vulnerable-Web-Application,Local File Inclusion,Replacing the URL by http://localhost/vuln-wa/FileInclusion/pages/lvl1.php?file=lvl1.php,/FileInclusion/pages/lvl1.php,25,Manual,CWE-73,PHP
+Vulnerable-Web-Application,Local File Inclusion,Replacing the URL by http://localhost/vuln-wa/FileInclusion/pages/lvl2.php?file=lvl1.php,/FileInclusion/pages/lvl2.php,32,Manual,CWE-73,PHP
+Vulnerable-Web-Application,Local File Inclusion,Replacing the URL by http://localhost/vuln-wa/FileInclusion/pages/lvl3.php?file=lvl3,/FileInclusion/pages/lvl3.php,34,WAP,CWE-73,PHP
+Vulnerable-Web-Application,Local File Inclusion,Replacing the URL by http://localhost/vuln-wa/FileInclusion/pages/lvl4.php?file=lvl1.php.php,/FileInclusion/pages/lvl4.php,35,WAP,CWE-73,PHP
+String Web Chat,Network sniffing,Using a packet sniffer in the login/register to see the plain private information,Client.java,69,"SpotBugs;WireShark",CWE-319,Java
+String Web Chat,Remote code execution,Create a new class that implements SERIALIZABLE and implement method readObject. Inside use a system call. In client change the writeObject to use a instance of this new class,Server.java,152,SpotBugs;Manual,CWE-502,Java
+String Web Chat,Remote code execution,Create a new class that implements SERIALIZABLE and implement method readObject. Inside use a system call. In client change the writeObject to use a instance of this new class,Server.java,90,SpotBugs;Manual,CWE-502,Java
+String Web Chat,Remote code execution,Create a new class that implements SERIALIZABLE and implement method readObject. Inside use a system call. In client change the writeObject to use a instance of this new class,Server.java,158,SpotBugs;Manual,CWE-502,Java
